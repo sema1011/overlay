@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 || ( dev-qt/qtphonon:4 kde-base/phonon-kde:4 media-libs/phonon ) dev-qt/qtscript:4
+DESCRIPTION=Music player for social network VKontakte.ru
+EAPI=4
+HOMEPAGE=https://launchpad.net/~yuberion/+archive/vkget
+IUSE=debug linguas_ru linguas_uk
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 || ( dev-qt/qtphonon:4 kde-base/phonon-kde:4 media-libs/phonon ) dev-qt/qtscript:4
+SLOT=0
+SRC_URI=https://launchpad.net/~yuberion/+archive/vkget/+files/vkplayer_0.08-15.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=dd7f25486b220bc1076758be789576de

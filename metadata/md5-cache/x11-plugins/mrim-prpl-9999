@@ -1,0 +1,10 @@
+DEFINED_PHASES=install unpack
+DEPEND=>=net-im/pidgin-2.6 virtual/pkgconfig sys-devel/gettext dev-vcs/git
+DESCRIPTION=Mail.Ru agent protocol for pidgin.
+EAPI=4
+HOMEPAGE=http://code.google.com/p/mrim-prpl/
+LICENSE=GPL-2
+RDEPEND=>=net-im/pidgin-2.6
+SLOT=0
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	0036be0562e4e4a1956a054554414af0	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=71298ead109fbe4e6dc0eb892c09c74b

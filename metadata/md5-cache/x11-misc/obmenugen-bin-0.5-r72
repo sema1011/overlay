@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=Flexible, easy to use and (really) fast static/dinamic menu generator for the Openbox Window Manager.
+EAPI=3
+HOMEPAGE=https://launchpad.net/obmenugen
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=x11-wm/openbox
+SLOT=0
+SRC_URI=http://launchpad.net/obmenugen/0.5/0.5/+download/obmenugen-0.5-r72.tar.bz2
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=6150f7704c6d73855f7c00df4b4371f9
