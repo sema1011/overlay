@@ -12,7 +12,7 @@ EGIT_REPO_URI="git://crengine.git.sourceforge.net/gitroot/crengine/crengine"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="qt4 +wxwidgets hyphen"
 
 DEPEND="media-libs/freetype
 	media-libs/libpng:0=
