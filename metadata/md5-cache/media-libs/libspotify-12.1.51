@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=Spotify client developer library
+EAPI=5
+HOMEPAGE=https://developer.spotify.com/technologies/libspotify/
+IUSE=doc
+KEYWORDS=~x86 ~amd64
+LICENSE=libspotify
+SLOT=0
+SRC_URI=amd64? ( https://developer.spotify.com/download/libspotify/libspotify-12.1.51-Linux-x86_64-release.tar.gz ) x86? ( https://developer.spotify.com/download/libspotify/libspotify-12.1.51-Linux-i686-release.tar.gz )
+_md5_=e6a3e00458ab0e77099d4339b0fd242a
