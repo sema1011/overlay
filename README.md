@@ -7,3 +7,9 @@ git push -u origin master
 
 git remote add origin https://github.com/sema1011/overlay.git
 git push -u origin master
+
+
+## Update
+git add --all
+git commit -m "first commit"
+git push -u origin master
