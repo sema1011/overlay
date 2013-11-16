@@ -12,6 +12,6 @@ git push -u origin master
 
 
 ## Update
-git add --all \n
-git commit -m "first commit" \n
+git add --all ;
+git commit -m "first commit" ;
 git push -u origin master
