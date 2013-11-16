@@ -1,11 +1,13 @@
-DEFINED_PHASES=install postinst postrm preinst prepare setup unpack
-DEPEND=x11-libs/gtk+:2 >=sys-apps/sed-4 >=dev-vcs/bzr-2.0.1
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
+DEPEND=>=dev-vcs/bzr-2.0.1 >=sys-apps/sed-4
 DESCRIPTION=Elementary icon theme is designed to be smooth, sexy, clear, and efficient
-EAPI=4
+EAPI=5
 HOMEPAGE=https://launchpad.net/elementaryicons
+IUSE=+gtk +icons
 KEYWORDS=~amd64 ~x86
-LICENSE=GPL-2
-RESTRICT=binchecks strip
+LICENSE=GPL-3
+RDEPEND=gtk? ( x11-libs/gtk+:2 ) icons? ( x11-themes/hicolor-icon-theme )
+RESTRICT=binchecks mirror strip
 SLOT=0
-_eclasses_=bzr	8b59c16d7183cb93649d7abe70dc4c85	eutils	4878e7f88afc0ba0866ac112190b0fd4	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=42e10487fda66445c1328b016b7cac51
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	bzr	8b59c16d7183cb93649d7abe70dc4c85	eutils	4878e7f88afc0ba0866ac112190b0fd4	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=89c7771ab7bb67c4946d38d68caef9c6

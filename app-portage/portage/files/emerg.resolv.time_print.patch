@@ -1,0 +1,155 @@
+index 7b77edc..cfd7025 100644
+--- a/pym/_emerge/depgraph.py
++++ b/pym/_emerge/depgraph.py
+@@ -86,6 +86,10 @@ if sys.hexversion >= 0x3000000:
+ else:
+ 	_unicode = unicode
+ 
++from time import gmtime, strftime
++def time_print(message):
++	print("\n%s: %s  " % (strftime("%Y-%m-%d %H:%M:%S", gmtime()), message), end="")
++
+ class _scheduler_graph_config(object):
+ 	def __init__(self, trees, pkg_cache, graph, mergelist):
+ 		self.trees = trees
+@@ -1585,6 +1589,10 @@ class depgraph(object):
+ 			self._spinner_update()
+ 			while dep_stack:
+ 				dep = dep_stack.pop()
++#				try:
++#					time_print("  Processing: %s" % dep.cpv)
++#				except AttributeError:
++#					pass
+ 				if isinstance(dep, Package):
+ 					if not self._add_pkg_deps(dep,
+ 						allow_unsatisfied=allow_unsatisfied):
+@@ -2106,6 +2114,7 @@ class depgraph(object):
+ 		for dep_root, dep_string, dep_priority in deps:
+ 				if not dep_string:
+ 					continue
++#				time_print("    Reducing: %s" % dep_string)
+ 				if debug:
+ 					writemsg_level("\nParent:    %s\n" % (pkg,),
+ 						noiselevel=-1, level=logging.DEBUG)
+@@ -2154,6 +2163,8 @@ class depgraph(object):
+ 				if not dep_string:
+ 					continue
+ 
++#				time_print("    Disjunct: %s" % dep_string)
++
+ 				if not self._add_pkg_dep_string(
+ 					pkg, dep_root, dep_priority, dep_string,
+ 					allow_unsatisfied):
+@@ -3005,6 +3016,7 @@ class depgraph(object):
+ 		virtuals = pkgsettings.getvirtuals()
+ 		args = self._dynamic_config._initial_arg_list[:]
+ 
++		time_print("Adding root packages")
+ 		for arg in self._expand_set_args(args, add_to_digraph=True):
+ 			for atom in arg.pset.getAtoms():
+ 				self._spinner_update()
+@@ -3116,20 +3128,24 @@ class depgraph(object):
+ 
+ 		# Now that the root packages have been added to the graph,
+ 		# process the dependencies.
++		time_print("Processing dependencies")
+ 		if not self._create_graph():
+ 			return 0, myfavorites
+ 
++		time_print("Checking for slot conflicts")
+ 		try:
+ 			self.altlist()
+ 		except self._unknown_internal_error:
+ 			return False, myfavorites
+ 
++		time_print("Checking for blocker conflicts")
+ 		if (self._dynamic_config._slot_collision_info and
+ 			not self._accept_blocker_conflicts()) or \
+ 			(self._dynamic_config._allow_backtracking and
+ 			"slot conflict" in self._dynamic_config._backtrack_infos):
+ 			return False, myfavorites
+ 
++		time_print("Checking for rebuild triggers")
+ 		if self._rebuild.trigger_rebuilds():
+ 			backtrack_infos = self._dynamic_config._backtrack_infos
+ 			config = backtrack_infos.setdefault("config", {})
+@@ -3138,12 +3154,14 @@ class depgraph(object):
+ 			self._dynamic_config._need_restart = True
+ 			return False, myfavorites
+ 
++		time_print("Checking if restart is needed")
+ 		if "config" in self._dynamic_config._backtrack_infos and \
+ 			("slot_operator_mask_built" in self._dynamic_config._backtrack_infos["config"] or
+ 			"slot_operator_replace_installed" in self._dynamic_config._backtrack_infos["config"]) and \
+ 			self.need_restart():
+ 			return False, myfavorites
+ 
++		time_print("Checking if we have to prune rebuilds")
+ 		if not self._dynamic_config._prune_rebuilds and \
+ 			self._dynamic_config._slot_operator_replace_installed and \
+ 			self._get_missed_updates():
+@@ -3161,10 +3179,12 @@ class depgraph(object):
+ 			self._dynamic_config._need_restart = True
+ 			return False, myfavorites
+ 
++		time_print("Checking if restart is needed")
+ 		if self.need_restart():
+ 			# want_restart_for_use_change triggers this
+ 			return False, myfavorites
+ 
++		time_print("Checking for parameters that change behavior")
+ 		if "--fetchonly" not in self._frozen_config.myopts and \
+ 			"--buildpkgonly" in self._frozen_config.myopts:
+ 			graph_copy = self._dynamic_config.digraph.copy()
+@@ -3188,6 +3208,7 @@ class depgraph(object):
+ 
+ 		digraph_nodes = self._dynamic_config.digraph.nodes
+ 
++		time_print("Checking for changes that are needed")
+ 		if any(x in digraph_nodes for x in
+ 			self._dynamic_config._needed_unstable_keywords) or \
+ 			any(x in digraph_nodes for x in
+@@ -3200,6 +3221,7 @@ class depgraph(object):
+ 			self._dynamic_config._success_without_autounmask = True
+ 			return False, myfavorites
+ 
++		time_print("Done resolving!")
+ 		# We're true here unless we are missing binaries.
+ 		return (True, myfavorites)
+ 
+@@ -5851,21 +5873,25 @@ class depgraph(object):
+ 				root_config.root]["root_config"] = root_config
+ 
+ 	def _resolve_conflicts(self):
+-
++		time_print ("Trying to accept blocker conflicts ")
+ 		if "complete" not in self._dynamic_config.myparams and \
+ 			self._dynamic_config._allow_backtracking and \
+ 			self._dynamic_config._slot_collision_nodes and \
+ 			not self._accept_blocker_conflicts():
+ 			self._dynamic_config.myparams["complete"] = True
+ 
++		time_print ("Resolving slot conflicts for complete graph ")
+ 		if not self._complete_graph():
+ 			raise self._unknown_internal_error()
+ 
++		time_print ("Processing slot conflicts ")
+ 		self._process_slot_conflicts()
+ 
+ 		if self._dynamic_config._allow_backtracking:
++			time_print ("Triggering slot operator reinstalls ")
+ 			self._slot_operator_trigger_reinstalls()
+ 
++		time_print ("Validating blockers ")
+ 		if not self._validate_blockers():
+ 			# Blockers don't trigger the _skip_restart flag, since
+ 			# backtracking may solve blockers when it solves slot
+@@ -7883,7 +7909,7 @@ def _spinner_start(spinner, myopts):
+ 		spinner.update = spinner.update_quiet
+ 
+ 	if show_spinner:
+-		portage.writemsg_stdout("Calculating dependencies  ")
++		portage.writemsg_stdout("%s: Calculating dependencies  " % strftime("%Y-%m-%d %H:%M:%S", gmtime()))
+ 
+ def _spinner_stop(spinner):
+ 	if spinner is None or \

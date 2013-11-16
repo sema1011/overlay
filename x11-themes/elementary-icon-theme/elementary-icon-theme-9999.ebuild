@@ -1,30 +1,33 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
-inherit gnome2-utils bzr
+inherit base bzr gnome2-utils
 
 DESCRIPTION="Elementary icon theme is designed to be smooth, sexy, clear, and efficient"
 HOMEPAGE="https://launchpad.net/elementaryicons"
 EBZR_REPO_URI="lp:elementaryicons"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="+gtk +icons"
 
-CDEPEND=""
-RDEPEND="${CDEPEND}"
-DEPEND="${CDEPEND}
-	x11-libs/gtk+:2"
+RDEPEND="${DEPEND}
+	gtk? (
+		x11-libs/gtk+:2
+	)
+	icons? (
+		x11-themes/hicolor-icon-theme
+	)"
+DEPEND=""
 
-RESTRICT="binchecks strip"
+RESTRICT="binchecks mirror strip"
 
-pkg_setup() {
-	DOCS=( AUTHORS COPYING CONTRIBUTORS )
-}
+S="${WORKDIR}/elementary-icon-theme-9999"
+DOCS=( AUTHORS COPYING CONTRIBUTORS )
 
 src_install() {
 	dodoc ${DOCS}
@@ -45,4 +48,3 @@ pkg_postinst() {
 pkg_postrm() {
 	gnome2_icon_cache_update
 }
-

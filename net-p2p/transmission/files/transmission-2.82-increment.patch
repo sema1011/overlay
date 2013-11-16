@@ -1,0 +1,11 @@
+--- libtransmission/bandwidth.c	2013-11-02 10:08:46.563719867 +0400
++++ libtransmission/bandwidth.c	2013-11-02 10:09:57.028679292 +0400
+@@ -225,7 +225,7 @@
+       /* value of 3000 bytes chosen so that when using uTP we'll send a full-size
+        * frame right away and leave enough buffered data for the next frame to go
+        * out in a timely manner. */
+-      const size_t increment = 3000;
++      const size_t increment = 3000;
+ 
+       const int bytesUsed = tr_peerIoFlush (peers[i], dir, increment);
+ 
