@@ -1,9 +1,0 @@
-# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: $
-
-*crossover-games-bin-7.1.0 (21 Dec 2008)
-
-  21 Dec 2008; Eric R. Stoeckel, Jr. <dev454@gmail.com>
-  +crossover-games-bin-7.1.0.ebuild:
-  Version bump to newest supported build based on bug #215667
