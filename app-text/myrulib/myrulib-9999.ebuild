@@ -5,15 +5,15 @@
 EAPI=5
 WX_GTK_VER="2.8"
 
-inherit eutils wxwidgets
+inherit eutils wxwidgets git-2
 
 DESCRIPTION="E-book collection manager"
 HOMEPAGE="http://www.lintest.ru/wiki/MyRuLib"
-SRC_URI="http://lintest.ru/pub/${P}.tar.bz2"
+EGIT_REPO_URI="git://github.com/lintest/myrulib"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="+icu +links reader syslog"
 
 RDEPEND="
@@ -42,9 +42,6 @@ src_prepare() {
 		3rdparty/sqlite3 \
 		3rdparty/wxsqlite3 \
 	|| die
-
-	sed -i -e 's/-lwxsqlite3-2.8/-lwxcode_gtk2u_wxsqlite3-2.8/' \
-		configure.in configure || die
 }
 
 src_configure() {
