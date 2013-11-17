@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gmrun/gmrun-0.9.2-r1.ebuild,v 1.3 2011/04/15 17:36:56 ssuominen Exp $
+# $Header: $
 
 EAPI=2
 inherit autotools eutils

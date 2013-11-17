@@ -1,0 +1,10 @@
+DEFINED_PHASES=install postinst unpack
+DESCRIPTION=Advanced cross-platform Google Drive client
+EAPI=4
+HOMEPAGE=https://www.insynchq.com/
+IUSE=gnome kde
+KEYWORDS=~x86 ~amd64
+RDEPEND=gnome? ( dev-python/nautilus-python ) kde? ( kde-base/kdelibs )
+SLOT=0
+SRC_URI=x86? ( gnome? ( http://s.insynchq.com/builds/insync-beta-gnome-cinnamon-common_0.9.41_i386.deb ) !gnome? ( kde? ( http://s.insynchq.com/builds/insync-beta-kde_0.9.41_i386.deb ) !kde? ( http://s.insynchq.com/builds/insync-beta-ubuntu_0.9.41_i386.deb ) ) ) amd64? ( gnome? ( http://s.insynchq.com/builds/insync-beta-gnome-cinnamon-common_0.9.41_amd64.deb ) !gnome? ( kde? ( http://s.insynchq.com/builds/insync-beta-kde_0.9.41_amd64.deb ) !kde? ( http://s.insynchq.com/builds/insync-beta-ubuntu_0.9.41_amd64.deb ) ) ) gnome? ( http://s.insynchq.com/builds/insync-beta-gnome_0.9.40_all.deb )
+_md5_=0da631bad261c1f871afc3f57428f93c

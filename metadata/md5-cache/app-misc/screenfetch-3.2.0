@@ -7,4 +7,4 @@ LICENSE=GPL-3
 RDEPEND=media-gfx/scrot x11-apps/xdpyinfo
 SLOT=0
 SRC_URI=https://github.com/KittyKatt/screenFetch/archive/v3.2.0.tar.gz -> screenfetch-3.2.0.tar.gz
-_md5_=b25726ce17f9cc8a6ef25f197f239e33
+_md5_=53d7a7dc84457b08874432637b387a25

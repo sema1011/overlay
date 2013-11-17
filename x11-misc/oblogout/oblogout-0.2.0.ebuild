@@ -1,7 +1,7 @@
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
-EAPI=3
-SUPPORT_PYTHON_ABIS=1
 RESTRICT_PYTHON_ABIS="3.*"
 PYTHON_MODNAME="oblogout"
 

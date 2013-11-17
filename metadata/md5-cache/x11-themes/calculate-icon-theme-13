@@ -11,4 +11,4 @@ REQUIRED_USE=^^ ( themes_CLD themes_CLDX themes_CLDG )
 SLOT=0
 SRC_URI=ftp://ftp.calculate.ru/pub/calculate/themes/icon/icon-calculate-13.tar.bz2
 _eclasses_=gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=8b4e89886150b48581a95302468a1420
+_md5_=7b038383b4345550157e4feb4f2d42dc

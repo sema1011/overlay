@@ -1,7 +1,7 @@
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils
 
 DESCRIPTION="simplified/streamlined version of wine geared towards games"
 HOMEPAGE="http://www.codeweavers.com/products/cxgames/"

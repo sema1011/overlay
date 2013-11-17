@@ -1,7 +1,7 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
-DESCRIPTION="Calculate X.Org mouse cursor"
 HOMEPAGE="http://www.calculate-linux.org/packages/x11-themes/calculate-xcursors"
 
 SRC_URI="ftp://ftp.calculate.ru/pub/calculate/${PN}/${P}.tar.bz2"
