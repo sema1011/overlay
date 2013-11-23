@@ -21,7 +21,8 @@ IUSE=""
 
 RDEPEND="x11-libs/libX11
 	>=dev-python/pygtk-2.12:2
-	dev-python/pygtksourceview"
+	dev-python/pygtksourceview
+	app-arch/p7zip"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	"

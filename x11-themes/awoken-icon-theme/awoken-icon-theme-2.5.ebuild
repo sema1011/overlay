@@ -6,13 +6,13 @@ EAPI=3
 inherit eutils
 
 MY_PN="AwOken"
-MY_PV="AwOken-2.3"
+MY_P="${MY_PN}-${PV}"
 MY_SETS="AwOken AwOkenDark AwOkenWhite"
-MY_PKG="awoken_by_alecive-d2pdw32.zip"
+MY_PKG="AwOken-2.5.zip"
 
 DESCRIPTION="AwOken Icon Theme"
 HOMEPAGE="http://alecive.deviantart.com/art/AwOken-163570862"
-SRC_URI="http://www.deviantart.com/download/163570862/${MY_PKG}"
+SRC_URI="https://dl.dropbox.com/u/8029324/${MY_PKG}"
 
 LICENSE="CCPL-Attribution-ShareAlike-NonCommercial-3.0"
 SLOT="0"
@@ -27,13 +27,13 @@ RDEPEND="${DEPEND}
 
 RESTRICT="binchecks strip"
 
-S="${WORKDIR}/${MY_PV}"
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack "$MY_PKG"
 	cd "$S" || die
 	for MY_SET in $MY_SETS; do
-		tar -xzf "${MY_SET}.tar.gz" || die
+		tar -xf "${MY_SET}.tar.gz" || die
 	done
 }
 
@@ -42,17 +42,6 @@ src_prepare() {
 	for MY_SET in $MY_SETS; do
 		chown -R root:root "${MY_SET}" || die
 	done
-	epatch "${FILESDIR}/${P}-scripts.patch"
-}
-
-awoken_symlink_dest() {
-	F=$(file -b "$1")
-	echo $F | egrep -q '^broken'
-	if [ $? -eq 0 ]; then
-		echo $F | awk '{print $5}' | sed -e "s/^\`//" -e "s/'$//"
-	else
-		echo $F | awk '{print $4}' | sed -e "s/^\`//" -e "s/'$//"
-	fi
 }
 
 awoken_install_iconset() {
@@ -62,10 +51,19 @@ awoken_install_iconset() {
 	MY_SFX=$(echo "$MY_SET" | sed -e "s/^${MY_PN}//" -e 's/\(.*\)/\L\1/' -e 's/^$/clear/')
 
 	cd "$S" || die
-	dobin "${MY_SET}/awoken-icon-theme-customization-${MY_SFX}"
 	dodir "$MY_D"
 	insinto "$MY_D"
+	exeinto "$MY_D"
+	doexe "${MY_SET}/awoken-icon-theme-customization-${MY_SFX}"
 	doins "${MY_SET}/index.theme"
+	dosym "${MY_D}/awoken-icon-theme-customization-${MY_SFX}" \
+		"/usr/bin/awoken-icon-theme-customization-${MY_SFX}"
+	if [ "$MY_SET" == "$MY_PN" ]; then
+		doexe "${MY_D}/awoken-icon-theme-customization"
+		doins "${MY_D}/Installation_and_Instructions.pdf"
+		dosym "${MY_D}/awoken-icon-theme-customization" \
+			"/usr/bin/awoken-icon-theme-customization"
+	fi
 
 	cd "$MY_S" || die
 	cp -rf "${MY_S}"/{clear,extra} "${D}/${MY_D}" || die
@@ -80,10 +78,8 @@ awoken_install_iconset() {
 }
 
 src_install() {
+	dodir "/usr/bin"
 	dodir "/usr/share/icons"
-	dobin "${MY_PN}/awoken-icon-theme-customization"
-	dodoc "${MY_PN}/Installation_and_Instructions.pdf"
-
 	for MY_SET in $MY_SETS; do
 		awoken_install_iconset "$MY_SET"
 	done
