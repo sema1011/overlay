@@ -7,6 +7,7 @@ EAPI=4
 MY_PN="${PN/f/F}"
 DESCRIPTION="A Bash Screenshot Information Tool"
 HOMEPAGE="https://github.com/KittyKatt/screenFetch"
+
 if [[ ${PV} == *9999* ]]; then
 	inherit git-2
 	EGIT_REPO_URI="https://github.com/KittyKatt/screenFetch"
@@ -23,7 +24,8 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="media-gfx/scrot
-	x11-apps/xdpyinfo"
+	x11-apps/xdpyinfo
+	gnome-base/gsettings-desktop-schemas"
 
 src_install() {
 	dobin ${PN}-dev
