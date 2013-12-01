@@ -11,18 +11,19 @@ MY_P="QuiteRSS-${PV}-src"
 
 DESCRIPTION="A Qt4-based RSS/Atom feed reader"
 HOMEPAGE="http://code.google.com/p/quite-rss/"
-SRC_URI="http://quite-rss.googlecode.com/files/${MY_P}.tar.bz2"
+SRC_URI="http://quiterss.org/files/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
-IUSE="debug"
+IUSE="+phonon debug"
 
 DEPEND="dev-db/sqlite:3
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qtsql:4[sqlite]
-	dev-qt/qtwebkit:4"
+	dev-qt/qtwebkit:4
+	phonon? ( dev-qt/qtphonon )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
