@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.14.1.ebuild,v 1.1 2013/12/03 17:49:47 pinkbyte Exp $
 
 EAPI=5
 
@@ -10,21 +10,24 @@ inherit l10n qt4-r2
 MY_P="QuiteRSS-${PV}-src"
 
 DESCRIPTION="A Qt4-based RSS/Atom feed reader"
-HOMEPAGE="http://code.google.com/p/quite-rss/"
-SRC_URI="http://quiterss.org/files/${PV}/${MY_P}.tar.bz2"
+HOMEPAGE="https://quiterss.org"
+SRC_URI="https://quiterss.org/files/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
-IUSE="+phonon debug"
+IUSE="debug phonon"
 
-DEPEND="dev-db/sqlite:3
+RDEPEND="
+	dev-db/sqlite:3
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
+	dev-qt/qtsingleapplication
 	dev-qt/qtsql:4[sqlite]
 	dev-qt/qtwebkit:4
-	phonon? ( dev-qt/qtphonon )"
-RDEPEND="${DEPEND}"
+	phonon? ( || ( media-libs/phonon dev-qt/qtphonon:4 ) )
+"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -44,5 +47,7 @@ src_prepare() {
 }
 
 src_configure() {
-	eqmake4 PREFIX="${EPREFIX}/usr"
+	eqmake4 PREFIX="${EPREFIX}/usr" \
+		SYSTEMQTSA=1 \
+		$(usex phonon '' 'DISABLE_PHONON=1')
 }
