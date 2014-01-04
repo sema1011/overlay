@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DEPEND=>=dev-libs/dbus-glib-0.98 >=dev-libs/glib-2.26 >=dev-libs/libdbusmenu-12.10.2-r2:3[gtk2] dev-libs/acestream-libindicator >=x11-libs/gtk+-2.24.12:2
+DESCRIPTION=A library to allow applications to export a menu into the Unity Menu bar
+EAPI=5
+HOMEPAGE=http://launchpad.net/libappindicator
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1 LGPL-3
+RDEPEND=>=dev-libs/dbus-glib-0.98 >=dev-libs/glib-2.26 >=dev-libs/libdbusmenu-12.10.2-r2:3[gtk2] dev-libs/acestream-libindicator >=x11-libs/gtk+-2.24.12:2
+SLOT=3
+SRC_URI=x86? ( mirror://ubuntu/pool/main/liba/libappindicator/libappindicator1_12.10.0-0ubuntu1_i386.deb ) amd64? ( mirror://ubuntu/pool/main/liba/libappindicator/libappindicator1_12.10.0-0ubuntu1_amd64.deb )
+_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=d65415c68b253ccc9ddd42fdb07f3dd8
