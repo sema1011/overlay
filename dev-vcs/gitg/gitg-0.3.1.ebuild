@@ -22,6 +22,7 @@ RDEPEND=">=dev-libs/glib-2.26:2
 	>=gnome-base/gconf-2.10:2
 	>=gnome-base/gsettings-desktop-schemas-0.1.1
 	dev-vcs/git
+	dev-libs/libgit2-glib
 	glade? ( >=dev-util/glade-3.2:3.10 )
 "
 DEPEND="${RDEPEND}
@@ -29,9 +30,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-util/intltool-0.40"
 
-#PATCHES=(
-#	"${FILESDIR}/${PN}-0.2.6-fix-libreoffice.patch"
-#)
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
