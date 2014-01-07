@@ -22,6 +22,7 @@ RDEPEND=">=dev-libs/glib-2.26:2
 	>=gnome-base/gconf-2.10:2
 	>=gnome-base/gsettings-desktop-schemas-0.1.1
 	dev-vcs/git
+	dev-libs/libgit2
 	dev-libs/libgit2-glib
 	glade? ( >=dev-util/glade-3.2:3.10 )
 "
@@ -41,6 +42,7 @@ src_prepare() {
 src_configure() {
 	# Disable maintainer to get rid of -Werror  (bug #363009)
 	G2CONF="${G2CONF}
+		--disable-webkit
 		--disable-static
 		--disable-deprecations
 		--disable-dependency-tracking
