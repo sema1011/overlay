@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.14.1.ebuild,v 1.1 2013/12/03 17:49:47 pinkbyte Exp $
+# $Header: $
 
 EAPI=5
 

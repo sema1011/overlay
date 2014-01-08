@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/zukitwo-2012.07.02-r1.ebuild,v 1.1 2012/07/21 20:24:08 tetromino Exp $
+# $Header: $
 
 EAPI="4"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.32.2.ebuild,v 1.9 2012/12/16 08:31:41 tetromino Exp $
+# $Header: $
 
 EAPI="3"
 GCONF_DEBUG="no"

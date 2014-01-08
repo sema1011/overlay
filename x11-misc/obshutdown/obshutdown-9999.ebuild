@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-9999.ebuild,v 1.2 2012/05/02 21:59:12 vapier Exp $
+# $Header: $
 
 EAPI="4"
 
@@ -18,4 +18,3 @@ SLOT="0"
 DEPEND=">=x11-libs/gtk+-2.24.10-r1
 	>=x11-libs/cairo-1.10.2"
 RDEPEND=""
-
