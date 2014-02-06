@@ -6,9 +6,9 @@ EAPI=3
 
 inherit qt4-r2 eutils
 
-DESCRIPTION="ScreenGen - Console screenlist generator."
+DESCRIPTION="ScreenGen - Console screenlist generator"
 HOMEPAGE="http://www.kochkin.org/doku.php/screengen/010-index"
-SRC_URI="https://github.com/sema1011/Files/raw/master/screengen-1.8.tar.bz2"
+SRC_URI="https://github.com/sema1011/Files/raw/master/screengen-1.7.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
