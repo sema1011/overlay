@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 
 IUSE_LIBC="elibc_glibc"
-IUSE="accessibility afs branding +consolekit dmx ipv6 gnome-keyring pam remote selinux tcpd xinerama $IUSE_LIBC"
+IUSE="accessibility afs branding +consolekit dmx ipv6 gnome-keyring pam remote selinux tcpd xinerama themes $IUSE_LIBC"
 
 # Name of the tarball with gentoo specific files
 GDM_EXTRA="${PN}-2.20.9-gentoo-files-r1"
@@ -42,6 +42,8 @@ RDEPEND=">=dev-libs/glib-2.12:2
 	x11-apps/sessreg
 	x11-libs/libXdmcp
 	xinerama? ( x11-libs/libXinerama )
+	themes? ( x11-themes/gdm-themes
+		x11-themes/gdm-themes-livecd )
 	consolekit? (
 		sys-auth/consolekit
 		dev-libs/dbus-glib )
