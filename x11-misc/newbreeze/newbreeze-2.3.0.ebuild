@@ -27,10 +27,6 @@ COMMON_DEPEND=">=dev-libs/glib-2.18:2
 
 S="${WORKDIR}"/NewBreeze-2.3.0
 
-src_prepare() {
-	epatch "${FILESDIR}"/ofilefd-fix.patch
-}
-
 src_configure() {
     eqmake4
     emake

@@ -19,7 +19,8 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="
-	dev-python/lxml"
+	dev-python/lxml
+	x11-misc/pcmanfm"
 
 src_install() {
 	dobin fb2info.py || die
