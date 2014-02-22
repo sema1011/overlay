@@ -1,0 +1,11 @@
+--- tools/tools.cpp	2014-02-22 21:16:21.264170645 +0400
++++ tools/tools.cpp	2014-02-22 21:15:56.123820256 +0400
+@@ -47,7 +47,7 @@
+ 
+ void Tools::printVersion()
+ {
+-    cout << "VERSION: 0.3.1" << endl;
++    cout << "VERSION: 0.3.3" << endl;
+ }
+ 
+ void Tools::printHelp()
