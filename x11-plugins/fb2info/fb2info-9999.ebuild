@@ -3,8 +3,6 @@
 # $Header: $
 
 EAPI=5
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
 
 inherit git-2
 
@@ -16,12 +14,14 @@ KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="pcmanfm +thunar"
 
 RDEPEND="
 	dev-python/lxml
-	x11-misc/pcmanfm"
-
+	dev-python/elementtree
+	pcmanfm? ( x11-misc/pcmanfm )
+	thunar? ( xfce-base/thunar )"
+		
 src_install() {
 	dobin fb2info.py || die
 	dosym fb2info.py /usr/bin/fb2info || die
