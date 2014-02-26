@@ -1,0 +1,10 @@
+DEFINED_PHASES=install unpack
+DEPEND=app-shells/bash sys-apps/portage dev-vcs/git
+DESCRIPTION=/etc/portage cleaner
+EAPI=4
+HOMEPAGE=https://github.com/megabaks/portconf
+LICENSE=GPL-3
+RDEPEND=app-shells/bash sys-apps/portage app-portage/eix app-portage/portage-utils sys-apps/gawk app-text/agrep
+SLOT=0
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-2	2027b81a576527fa16bece425941e094	git-r3	a01d126c1a6c2959f0d31ad7d61e7b0e	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=d0549e3bc7f8380fb70f865acc7bbfad

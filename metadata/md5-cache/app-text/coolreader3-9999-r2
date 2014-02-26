@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=sys-libs/zlib media-libs/libpng virtual/jpeg media-libs/freetype wxwidgets? ( app-admin/eselect-wxwidgets >=x11-libs/wxGTK-2.8 ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 ) hyphen? ( app-arch/unzip ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
+DESCRIPTION=CoolReader - reader of eBook files (fb2,epub,htm,rtf,txt)
+EAPI=4
+HOMEPAGE=http://www.coolreader.org/
+IUSE=+qt4 wxwidgets hyphen
+LICENSE=GPL-2
+RDEPEND=sys-libs/zlib media-libs/libpng virtual/jpeg media-libs/freetype wxwidgets? ( app-admin/eselect-wxwidgets >=x11-libs/wxGTK-2.8 ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 ) hyphen? ( app-arch/unzip ) media-fonts/corefonts
+REQUIRED_USE=^^ ( qt4 wxwidgets )
+SLOT=0
+SRC_URI=hyphen? ( http://www.alreader.com/downloads/AlReader2.Hyphen.zip )
+_eclasses_=cmake-utils	db5236989678f4de51b2588767b5b69d	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	git-2	2027b81a576527fa16bece425941e094	git-r3	a01d126c1a6c2959f0d31ad7d61e7b0e	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=9a69f1a70c9725e532c2c6fb63fee4da
