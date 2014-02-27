@@ -20,7 +20,8 @@ RDEPEND="
 	dev-python/lxml
 	dev-python/elementtree
 	pcmanfm? ( x11-misc/pcmanfm )
-	thunar? ( xfce-base/thunar )"
+	thunar? ( xfce-base/thunar )
+	dev-python/imaging"
 		
 src_install() {
 	dobin fb2info.py || die
