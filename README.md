@@ -16,6 +16,3 @@ git add --all ;
 git commit -m "first commit" ;
 git push -u origin master
 
-
-## Add Overlay
-wget -O /var/lib/layman/portage-home.xml https://raw2.github.com/sema1011/overlay/master/repo.xml
