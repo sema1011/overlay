@@ -16,7 +16,8 @@ IUSE=""
 
 DEPEND="dev-libs/glib:2
 	>=x11-libs/gtk+-2.20:2
-	x11-misc/shared-mime-info"
+	x11-misc/shared-mime-info
+	media-gfx/exiv2"
 RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS ChangeLog* NEWS README TODO"
