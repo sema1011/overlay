@@ -14,13 +14,14 @@ KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="pcmanfm +thunar"
+IUSE="pcmanfm thunar kde"
 
 RDEPEND="
 	dev-python/lxml
 	dev-python/elementtree
 	pcmanfm? ( x11-misc/pcmanfm )
 	thunar? ( xfce-base/thunar )
+	kde? ( kde-base/dolphin )
 	dev-python/imaging"
 		
 src_install() {
