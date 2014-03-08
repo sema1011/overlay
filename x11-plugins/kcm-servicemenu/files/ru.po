@@ -1,0 +1,203 @@
+# Header entry was created by KBabel!
+#
+#. i18n: file: src/sm.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, smGui)
+#: rc.cpp:3
+# Ritt K. <ritt.ks@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Mime-Version: 1.0"
+"Last-Translator: Ritt K. <ritt.ks@gmail.com>\n"
+"PO-Revision-Date: 2009-10-13 02:16+0400\n"
+"Project-Id-Version: \n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"X-Generator: Lokalize 1.0\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. i18n: file: src/sm.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, smGui)
+#: rc.cpp:3
+msgid "Service Menu Manager"
+msgstr "Управление служебными меню"
+
+#. i18n: file: src/sm.ui:27
+#. i18n: ectx: property (toolTip), widget (QPushButton, newButton)
+#: rc.cpp:6
+msgid "Get new menus from the Internet"
+msgstr "Загрузить новые служебные меню из Интернет"
+
+#. i18n: file: src/sm.ui:30
+#. i18n: ectx: property (whatsThis), widget (QPushButton, newButton)
+#: rc.cpp:9
+msgid ""
+"You need to be connected to the Internet to use this action. A dialog will "
+"display a list of menus from the http://www.kde.org website. Clicking the "
+"Install button associated with a service menu will install this servie menu "
+"locally."
+msgstr ""
+"Для данного действия необходимо соединение с Интернет.\n"
+"В диалоге будет отображён список пакетов служебных меню с веб-сайта "
+"http://www.kde.org/.\n"
+"Щелчком на кнопке \"Установить\" соответствующее служебное меню будет "
+"установлено локально."
+
+#. i18n: file: src/sm.ui:36
+#. i18n: ectx: property (text), widget (QPushButton, newButton)
+#: rc.cpp:12
+msgid "Get new service menus..."
+msgstr "Загрузить новые меню..."
+
+#. i18n: file: src/sm.ui:43
+#. i18n: ectx: property (toolTip), widget (QPushButton, installButton)
+#: rc.cpp:15
+msgid "Install a menu archive file you already have locally"
+msgstr "Установить пакет служебного меню из файла"
+
+#. i18n: file: src/sm.ui:46
+#. i18n: ectx: property (whatsThis), widget (QPushButton, installButton)
+#: rc.cpp:18
+msgid ""
+"If you already have a menu archive locally, this button will unpack it and "
+"make it available for KDE applications"
+msgstr ""
+"Если Вы имеете пакет служебного меню локально, он может быть установлен "
+"нажатием данной кнопки"
+
+#. i18n: file: src/sm.ui:52
+#. i18n: ectx: property (text), widget (QPushButton, installButton)
+#: rc.cpp:21
+msgid "Install service menu..."
+msgstr "Установить меню из файла..."
+
+#. i18n: file: src/sm.ui:59
+#. i18n: ectx: property (toolTip), widget (QPushButton, removeButton)
+#: rc.cpp:24
+msgid "Remove the selected menu from your disk"
+msgstr "Удалить выбранное служебное меню с диска."
+
+#. i18n: file: src/sm.ui:62
+#. i18n: ectx: property (whatsThis), widget (QPushButton, removeButton)
+#: rc.cpp:27
+msgid "This will remove the selected menu from your disk."
+msgstr "Это удалит выбранное служебное меню с диска."
+
+#. i18n: file: src/sm.ui:68
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: rc.cpp:30
+msgid "Remove service menu"
+msgstr "Удалить меню"
+
+#. i18n: file: src/sm.ui:78
+#. i18n: ectx: property (text), widget (QPushButton, infoButton)
+#: rc.cpp:33
+msgid "Info"
+msgstr "Информация"
+
+#. i18n: file: src/sm.ui:92
+#. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
+#. i18n: file: src/sm.ui:139
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#. i18n: file: src/sm.ui:92
+#. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
+#. i18n: file: src/sm.ui:139
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#: rc.cpp:36 rc.cpp:42 src/sm.cpp:344
+msgid "Name"
+msgstr "Название"
+
+#. i18n: file: src/sm.ui:97
+#. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
+#: rc.cpp:39 src/sm.cpp:345
+msgid "Description"
+msgstr "Описание"
+
+#. i18n: file: src/sm.ui:162
+#. i18n: ectx: property (text), widget (QPushButton, backButton)
+#: rc.cpp:45
+msgid "Back"
+msgstr "Назад"
+
+#. i18n: file: src/sm.ui:193
+#. i18n: ectx: attribute (label), widget (QWidget, page1)
+#: rc.cpp:48
+msgid "About"
+msgstr "О пакете"
+
+#. i18n: file: src/sm.ui:227
+#. i18n: ectx: property (text), widget (QTreeWidget, treeWidget_2)
+#: rc.cpp:51
+msgid "1"
+msgstr ""
+
+#. i18n: file: src/sm.ui:232
+#. i18n: ectx: property (text), widget (QTreeWidget, treeWidget_2)
+#: rc.cpp:54
+msgid "2"
+msgstr ""
+
+#. i18n: file: src/sm.ui:249
+#. i18n: ectx: attribute (label), widget (QWidget, page2)
+#: rc.cpp:57
+msgid "Desktop files"
+msgstr "Файлы рабочего стола"
+
+#. i18n: file: src/sm.ui:279
+#. i18n: ectx: attribute (label), widget (QWidget, Page3)
+#: rc.cpp:60
+msgid "Bin files"
+msgstr "Исполняемые файлы"
+
+#: rc.cpp:61
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Ritt K."
+
+#: rc.cpp:62
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ritt.ks@gmail.com"
+
+#: src/sm.cpp:161
+msgid "Drag or type service type URL"
+msgstr "Путь к пакету служебного меню"
+
+#: src/sm.cpp:197
+msgid "Unable to find the service menu archive %1."
+msgstr "Не удалось найти пакет служебного меню %1."
+
+#: src/sm.cpp:200
+msgid ""
+"Unable to download the serice menu archive;\n"
+"please check that address %1 is correct."
+msgstr ""
+"Не удалось загрузить пакет служебного меню;\n"
+"убедитесь в корректности адреса '%1'."
+
+#: src/sm.cpp:292 src/sm.cpp:332
+msgid "Please select an entry!"
+msgstr "Выберите меню!"
+
+#: src/sm.cpp:346
+msgid "Author"
+msgstr "Автор"
+
+#: src/sm.cpp:347
+msgid "Author Email"
+msgstr "EMail автора"
+
+#: src/sm.cpp:348
+msgid "Version"
+msgstr "Версия"
+
+#: src/sm.cpp:349 src/sm.cpp:383
+msgid "Homepage"
+msgstr "Веб-сайт"
+
+#: src/sm.cpp:350
+msgid "License"
+msgstr "Лицензия"
+

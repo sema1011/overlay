@@ -17,10 +17,11 @@ KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
+IUSE="gnome kde"
 
 RDEPEND="
-	rox-extra/gnome-thumbnailer"
+	gnome? ( media-video/ffmpegthumbnailer )
+	kde? ( media-video/kffmpegthumbnailer )"
 
 src_install() {
 	dobin imdb-thumbnailer || die
