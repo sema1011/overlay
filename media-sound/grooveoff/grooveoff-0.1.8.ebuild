@@ -4,7 +4,7 @@
 # $Header: $
 
 EAPI=5
-PLOCALES="cs el_GR en es eu fr it sk"
+PLOCALES="cs el_GR en es eu fr it sk ru"
 inherit l10n qt4-r2 cmake-utils
 
 DESCRIPTION="Offline Grooveshark.com music"
@@ -26,6 +26,7 @@ RDEPEND="
 DOCS=( README.md INSTALL ChangeLog )
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-add-ru.patch"
 	l10n_find_plocales_changes "translations" "${PN}_" '.ts'
 	
 	qt4-r2_src_prepare
