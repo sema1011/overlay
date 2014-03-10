@@ -1,3 +1,4 @@
+
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
@@ -7,7 +8,7 @@ inherit qt4-r2 eutils cmake-utils
 
 DESCRIPTION="Offline Grooveshark.com music"
 HOMEPAGE="https://github.com/gcala/grooveoff"
-SRC_URI="https://github.com/gcala/grooveoff/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://qt-apps.org/CONTENT/content-files/158258-${P}.tar.gz"
 
 KEYWORDS="~amd64 ~x86"
 
@@ -21,9 +22,7 @@ RDEPEND="
   media-libs/phonon
   dev-qt/qtcore
   dev-qt/qtgui"
-
-# S="${WORKDIR}/"
-
+  
 src_configure() {
 	mkdir -p ${S}/build
 	cd ${S}/build
