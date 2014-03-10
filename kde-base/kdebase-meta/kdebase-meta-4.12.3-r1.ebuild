@@ -22,6 +22,7 @@ RDEPEND="
 	$(add_kdebase_dep kdepasswd)
 	$(add_kdebase_dep kdialog)
 	$(add_kdebase_dep keditbookmarks)
+	$(add_kdebase_dep ksysguard '' 4.11)
 	$(add_kdebase_dep kephal '' 4.11)
 	$(add_kdebase_dep kfind)
 	$(add_kdebase_dep kfmclient)
