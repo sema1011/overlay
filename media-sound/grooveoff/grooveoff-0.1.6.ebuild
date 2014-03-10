@@ -18,7 +18,8 @@ RESTRICT="mirror"
 
 RDEPEND="
   dev-libs/qjson
-  "
+  media-libs/phonon
+  dev-qt/qtcore"
 
 S="${WORKDIR}/"
 
