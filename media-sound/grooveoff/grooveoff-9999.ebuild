@@ -4,7 +4,7 @@
 # $Header: $
 
 EAPI=4
-inherit qt4-r2 eutils git-2
+inherit qt4-r2 eutils git-2 cmake-utils
 
 DESCRIPTION="Offline Grooveshark.com music"
 HOMEPAGE="https://github.com/gcala/grooveoff"
