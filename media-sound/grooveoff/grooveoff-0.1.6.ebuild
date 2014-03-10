@@ -8,15 +8,18 @@ inherit qt4-r2 eutils
 
 DESCRIPTION="Offline Grooveshark.com music"
 HOMEPAGE="https://github.com/gcala/grooveoff"
-SRC_REPO_URI="https://github.com/gcala/grooveoff/archive/${PV}.tar.gz >> $P.tar.gz"
+SRC_URI="https://github.com/gcala/grooveoff/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
+RESTRICT="mirror"
 
-RDEPEND=""
+RDEPEND="
+  dev-libs/qjson
+  "
 
 S="${WORKDIR}/"
 
