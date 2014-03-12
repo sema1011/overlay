@@ -1,7 +1,7 @@
  
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: This ebuild is from mva overlay $
+# $Header: This ebuild is from sema1011 overlay $
 
 EAPI="5"
 inherit git-2 l10n cmake-utils
