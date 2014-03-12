@@ -4,47 +4,36 @@
 # $Header: $
 
 EAPI=5
-PLOCALES="cs el_GR en es eu fr it sk ru"
-inherit l10n qt4-r2 cmake-utils
+inherit l10n cmake-utils
 
 DESCRIPTION="Offline Grooveshark.com music"
 HOMEPAGE="https://github.com/gcala/grooveoff"
 SRC_URI="http://qt-apps.org/CONTENT/content-files/158258-${P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
-
 LICENSE="GPL-3"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-  dev-libs/qjson
-  media-libs/phonon
-  dev-qt/qtcore
-  dev-qt/qtgui"
+	dev-libs/qjson
+	media-libs/phonon-vlc
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	"
 
 DOCS=( README.md INSTALL ChangeLog )
 
+PATCHES=(
+	"${FILESDIR}/${P}-add-ru.patch"
+)
+
 src_prepare() {
-	epatch "${FILESDIR}/${P}-add-ru.patch"
+	cmake-utils_src_prepare
 	l10n_find_plocales_changes "translations" "${PN}_" '.ts'
-	
-	qt4-r2_src_prepare
 }
 
 src_configure() {
-	mkdir -p ${S}/build
-	cd ${S}/build
-	
-	cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+	cmake-utils_src_configure INSTALL_PREFIX="${EPREFIX}"/usr
 }
 
-src_compile() {
-	cd ${S}/build
-	emake || die "emake failed"
-}
-
-src_install() {
-	cd ${S}/build
-	emake DESTDIR="${D}" install || die
-}
