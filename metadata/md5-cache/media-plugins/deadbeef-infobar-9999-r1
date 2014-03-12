@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install unpack
+DEPEND=|| ( <media-sound/deadbeef-0.6[curl] <media-sound/deadbeef-0.6[cover] <media-sound/deadbeef-0.6[lastfm] ) gtk2? ( <media-sound/deadbeef-0.6[gtk2] ) gtk3? ( <media-sound/deadbeef-0.6[gtk3] ) dev-libs/libxml2 dev-vcs/mercurial
+DESCRIPTION=Infobar plugin for DeadBeeF audio player. Shows lyrics and artist's biography for the current track.
+EAPI=4
+HOMEPAGE=https://bitbucket.org/dsimbiriatin/deadbeef-infobar/wiki/Home
+IUSE=gtk2 gtk3
+LICENSE=GPL-2
+RDEPEND=|| ( <media-sound/deadbeef-0.6[curl] <media-sound/deadbeef-0.6[cover] <media-sound/deadbeef-0.6[lastfm] ) gtk2? ( <media-sound/deadbeef-0.6[gtk2] ) gtk3? ( <media-sound/deadbeef-0.6[gtk3] ) dev-libs/libxml2
+REQUIRED_USE=|| ( gtk2 gtk3 )
+SLOT=0
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	mercurial	6bb94b704fb44f17b02994ca3fa756a9	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=23ae02f2b6fdde1289749fa973cc5557

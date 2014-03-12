@@ -1,0 +1,10 @@
+DEFINED_PHASES=install prepare unpack
+DEPEND=x11-libs/gtk+:3 virtual/pkgconfig >=dev-vcs/bzr-2.0.1
+DESCRIPTION=A showcase for GTK+ widgets
+EAPI=2
+HOMEPAGE=https://code.launchpad.net/~cimi/+junk/twf-gtk+3
+LICENSE=GPL-2
+RDEPEND=x11-libs/gtk+:3
+SLOT=gtk-3
+_eclasses_=bzr	8b59c16d7183cb93649d7abe70dc4c85	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=13e387df645a5b331dd981e6a88e0950
