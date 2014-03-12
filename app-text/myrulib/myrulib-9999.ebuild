@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: This ebuild is from mva overlay $
 
-EAPI=5
+EAPI="5"
 WX_GTK_VER="2.8"
 
 inherit eutils wxwidgets git-2

@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: This ebuild is from mva overlay $
 
-EAPI=2
+EAPI="5"
 
 DESCRIPTION="The elegance of a dark theme with the usability of a light theme"
 HOMEPAGE="http://code.google.com/p/gnome-colors/"

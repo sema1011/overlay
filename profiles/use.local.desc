@@ -1,0 +1,8 @@
+# This file is deprecated as per GLEP 56 in favor of metadata.xml. Please add
+# your descriptions to your package's metadata.xml ONLY.
+# * generated automatically using egencache *
+
+media-plugins/deadbeef-infobar:gtk2 - Build with x11-libs/gtk+:2
+media-plugins/deadbeef-infobar:gtk3 - Build with x11-libs/gtk+:3
+media-plugins/deadbeef-vk:gtk2 - Build with x11-libs/gtk+:2
+media-plugins/deadbeef-vk:gtk3 - Build with x11-libs/gtk+:3

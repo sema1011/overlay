@@ -1,5 +1,5 @@
 #!/bin/sh
 
-find . -iname '*.ebuild' | \
+find /home/sema/Overlay -iname '*.ebuild' | \
 { [[ $@ ]] && grep $@ || cat; } | \
 xargs -I{} ebuild {} digest

@@ -1,0 +1,150 @@
+#!/bin/bash
+# review - Move a certain revision from sunrise/ to reviewed/
+# Released into the public domain
+
+source /etc/init.d/functions.sh
+
+BLUE=$'\033[34;01m'
+BOLD=$'\e[0;01m'
+DARKGREEN=$'\e[32m'
+GREEN=$'\e[32;01m'
+LIGHTBLUE=$HILITE
+RED=$'\033[31;01m'
+YELLOW=$'\033[33;01m'
+opt_norepoman=0
+opt_noupdate=0
+opt_quiet=0
+opt_verbose=0
+
+DIFF="${DIFF:-diff}"
+DIFF_OPTS="${DIFF_OPTS:--Nur}"
+
+repoman_check() {
+	if [[ "$opt_norepoman" == "0" ]] ; then
+		ebegin "Running repoman"
+		export PORTDIR_OVERLAY="$(pwd)"
+		repoman
+		eend $?
+		return $?
+	fi
+}
+
+usage() {
+cat << EOF
+${BOLD}Usage:${NORMAL} ${LIGHTBLUE}$0${NORMAL} [ ${GREEN}options${NORMAL} ] ${BLUE}revision${NORMAL}
+
+${GREEN}options${NORMAL}:
+  ${BOLD}--help, -h${NORMAL}       Show help
+  ${BOLD}--norepoman, -p${NORMAL}  Skip repoman check
+  ${BOLD}--noupdate, -d${NORMAL}   Don't update from repository before committing
+  ${BOLD}--quiet, -q${NORMAL}      Don't ask for confirmation
+  ${BOLD}--verbose, -v${NORMAL}    Show detailed information during commit
+EOF
+	exit ${1:-0}
+}
+
+while [[ $# > 0 ]] ; do
+	case "$1" in
+		--help|-h)
+			usage ;;
+
+		--norepoman|-p)
+			opt_norepoman=1
+			shift ;;
+
+		--noupdate|-d)
+			opt_noupdate=1
+			shift ;;
+
+		--quiet|-q)
+			opt_quiet=1
+			shift ;;
+
+		--verbose|-v)
+			opt_verbose=1
+			shift ;;
+
+		-*)
+   			echo "!!! Error: Unknown option ${1}. See: $0 -h"
+   			exit 1 ;;
+
+		*)
+			break ;;
+	esac
+done
+
+LC_ALL="C" ls -d *-* > ../profiles/categories
+if [[ $(git diff ../profiles/categories) ]]; then
+	git diff ../profiles/categories | if [[ "$opt_quiet" == "0" ]] ; then less; else cat; fi
+	echo -n "${BOLD}Commit changes?${NORMAL} [${GREEN}Yes${NORMAL}/${RED}No${NORMAL}] "
+	read choice
+	echo
+	case "$choice" in
+		y*|Y*|"")
+			git commit -m "Automatic update to categories" ../profiles/categories || exit 1
+			;;
+		*)
+			echo "Quitting."
+			echo
+			exit ;;
+	esac
+fi
+
+egencache --ignore-default-opts  --repo=portage-home \
+	--update-use-local-desc || exit $?
+
+if [[ $(git diff ../profiles/use.local.desc) ]]; then
+	git diff ../profiles/use.local.desc | if [[ "$opt_quiet" == "0" ]] ; then less; else cat; fi
+	echo -n "${BOLD}Commit changes?${NORMAL} [${GREEN}Yes${NORMAL}/${RED}No${NORMAL}] "
+	read choice
+	echo
+	case "$choice" in
+		y*|Y*|"")
+			git commit -m "Automatic update to use.local.desc" ../profiles/use.local.desc || exit 1
+			;;
+		*)
+			echo "Quitting."
+			echo
+			exit ;;
+	esac
+fi
+
+ebegin "Updating working copy to latest version from repository"
+git pull --rebase
+
+(
+repoman_check || exit $?
+
+ebegin "Running portdupe"
+./portdupe
+eend $?
+
+if [[ "$opt_quiet" == "0" ]] ; then
+	git diff master master
+fi
+) | if [[ "$opt_quiet" == "0" ]] ; then less; else cat; fi
+
+if [[ "$opt_quiet" == "0" ]] ; then
+	echo
+	echo -n "${BOLD}Commit changes?${NORMAL} [${GREEN}Yes${NORMAL}/${RED}No${NORMAL}] "
+	read choice
+	echo
+
+	case "$choice" in
+		y*|Y*|"")
+			;;
+
+		*)
+			echo "Quitting."
+			echo
+			exit ;;
+	esac
+fi
+
+ebegin "Pushing changes..."
+if [[ "$opt_verbose" == "1" ]] ; then
+	git push -v origin master
+else
+	git push origin master
+fi
+eend ${?}

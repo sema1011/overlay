@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: This ebuild is from mva overlay $
 
-EAPI="2"
+EAPI="5"
 
 DESCRIPTION="A showcase for GTK+ widgets"
 HOMEPAGE="http://www.stellingwerff.com/?page_id=10"

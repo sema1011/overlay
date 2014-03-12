@@ -1,9 +1,9 @@
 
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: This ebuild is from mva overlay $
 
-EAPI=5
+EAPI="5"
 inherit l10n cmake-utils
 
 DESCRIPTION="Offline Grooveshark.com music"
