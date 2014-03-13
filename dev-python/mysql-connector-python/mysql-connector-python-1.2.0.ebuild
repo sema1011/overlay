@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="MySQL driver written in Python"
 HOMEPAGE="http://dev.mysql.com/doc/connector-python/en/index.html"
-SRC_URI="https://github.com/sema1011/Files/raw/master/${P}.tar.gz"
+SRC_URI="https://github.com/sema1011/Files/raw/master/${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
