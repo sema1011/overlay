@@ -9,6 +9,7 @@ inherit eutils gnome2 multilib
 
 DESCRIPTION="Archive manager for GNOME"
 HOMEPAGE="http://fileroller.sourceforge.net/"
+SRC_URI="http://ftp.gnome.org/pub/gnome/sources/file-roller/2.32/${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
