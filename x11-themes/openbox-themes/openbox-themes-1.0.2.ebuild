@@ -6,7 +6,7 @@ EAPI="5"
 
 DESCRIPTION="Collection of Openbox themes"
 HOMEPAGE="http://wiki.archlinux.org/index.php/Openbox#Openbox_Themes"
-SRC_URI="ftp://ftp.uni-bayreuth.de/pub/linux/archlinux/community/os/i686/${P}-2-any.pkg.tar.xz"
+SRC_URI="https://github.com/sema1011/Files/raw/master/${P}-2-any.pkg.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
