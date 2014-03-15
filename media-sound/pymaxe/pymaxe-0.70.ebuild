@@ -6,8 +6,8 @@
 EAPI="5"
 inherit eutils
 
-DESCRIPTION="Offline Grooveshark.com music"
-HOMEPAGE="https://github.com/gcala/grooveoff"
+DESCRIPTION="Pymaxe is a free (open-source) application for downloading music and videoclips from Internet."
+HOMEPAGE="http://pymaxe.com/"
 SRC_URI="http://pymaxe.com/files/latest/pymaxe.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
