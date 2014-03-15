@@ -21,7 +21,6 @@ RDEPEND=""
 
 src_install() {
 	dobin fb2desc.py
-	# also known as screenfetch
 	dosym fb2desc.py /usr/bin/fb2desc
 	dodoc README.ru
 }
