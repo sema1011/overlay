@@ -12,7 +12,7 @@ DESCRIPTION="Extracts audio tracks from audio CD image to separate tracks"
 HOMEPAGE="http://flacon.github.io/"
 SRC_URI="https://github.com/flacon/flacon/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="GPL-3"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="flac mac mp3 mp4 ogg replaygain tta wavpack"
