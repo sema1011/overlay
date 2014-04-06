@@ -1,0 +1,17 @@
+$ minecraft
+asdf
+27 achievements
+208 recipes
+Setting user: kaasinees, -2478253823866027201
+LWJGL Version: 2.8.4
+Exception in thread "Minecraft main thread" java.lang.UnsatisfiedLinkError: org.lwjgl.opengl.GLContext.nLoadOpenGLLibrary()V
+        at org.lwjgl.opengl.GLContext.nLoadOpenGLLibrary(Native Method)
+        at org.lwjgl.opengl.GLContext.loadOpenGLLibrary(GLContext.java:380)
+        at org.lwjgl.opengl.LinuxDisplayPeerInfo.<init>(LinuxDisplayPeerInfo.java:57)
+        at org.lwjgl.opengl.LinuxDisplay.createPeerInfo(LinuxDisplay.java:788)
+        at org.lwjgl.opengl.DrawableGL.setPixelFormat(DrawableGL.java:61)
+        at org.lwjgl.opengl.Display.create(Display.java:843)
+        at org.lwjgl.opengl.Display.create(Display.java:754)
+        at net.minecraft.client.Minecraft.a(SourceFile:223)
+        at net.minecraft.client.Minecraft.run(SourceFile:515)
+        at java.lang.Thread.run(Thread.java:722)
