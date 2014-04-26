@@ -19,7 +19,7 @@ SRC_URI="https://github.com/flacon/flacon/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="flac mac mp3 mp4 ogg replaygain tta wavpack"
 
 RDEPEND="
