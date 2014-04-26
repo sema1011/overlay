@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: This ebuild is from sema1011 overlay $
+# $Header: media-sound/deadbeef-infobar/deadbeef-vk-9999.ebuild,v 1 2013/01/08 21:49:35 megabaks Exp $
 
-EAPI="5"
+EAPI=5
 
 inherit cmake-utils versionator
 
