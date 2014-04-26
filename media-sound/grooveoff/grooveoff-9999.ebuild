@@ -24,6 +24,10 @@ RDEPEND="
 
 DOCS=( README.md INSTALL ChangeLog )
 
+PATCHES=(
+	"${FILESDIR}/grooveoff-0.1.9-fix-rus.patch"
+)
+
 src_prepare() {
 	cmake-utils_src_prepare
 	l10n_find_plocales_changes "translations" "${PN}_" '.ts'
