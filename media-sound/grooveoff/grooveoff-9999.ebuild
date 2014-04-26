@@ -17,9 +17,13 @@ IUSE=""
 
 RDEPEND="
 	dev-libs/qjson
-	media-libs/phonon-vlc
+	media-libs/phonon
+	dev-qt/qtxmlpatterns:4
+	dev-qt/qtsvg:4
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
+	dev-qt/qtdbus:4
+	media-libs/taglib
 	"
 
 DOCS=( README.md INSTALL ChangeLog )

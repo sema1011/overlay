@@ -12,12 +12,15 @@ SRC_URI="https://github.com/gcala/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="
 	dev-libs/qjson
-	media-libs/phonon-vlc
+	media-libs/phonon
+	dev-qt/qtxmlpatterns:4
+	dev-qt/qtsvg:4
+	dev-qt/qtdbus:4
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	"
@@ -36,4 +39,3 @@ src_prepare() {
 src_configure() {
 	cmake-utils_src_configure INSTALL_PREFIX="${EPREFIX}"/usr
 }
-
