@@ -4,7 +4,7 @@
 # $Header: This ebuild is from sema1011 overlay $
 
 EAPI="5"
-inherit git-2 l10n cmake-utils
+inherit git-2 l10n cmake-utils fdo-mime gnome2-utils
 
 DESCRIPTION="Offline Grooveshark.com music"
 HOMEPAGE="https://github.com/gcala/grooveoff"
@@ -30,9 +30,25 @@ DOCS=( README.md INSTALL ChangeLog )
 
 src_prepare() {
 	cmake-utils_src_prepare
+
 	l10n_find_plocales_changes "translations" "${PN}_" '.ts'
+	l10n_for_each_disabled_locale_do 
 }
 
 src_configure() {
 	cmake-utils_src_configure INSTALL_PREFIX="${EPREFIX}"/usr
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 }
