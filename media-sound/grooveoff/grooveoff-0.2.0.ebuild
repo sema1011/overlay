@@ -26,7 +26,7 @@ RDEPEND="
 	media-libs/taglib
 	"
 
-DOCS=( README.md INSTALL ChangeLog )
+DOCS=( README.md INSTALL LICENSE ChangeLog )
 
 src_prepare() {
 	cmake-utils_src_prepare

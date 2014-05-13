@@ -25,7 +25,7 @@ RDEPEND="
 	dev-qt/qtgui:4
 	"
 
-DOCS=( README.md INSTALL ChangeLog )
+DOCS=( README.md INSTALL LICENSE ChangeLog )
 
 PATCHES=(
 	"${FILESDIR}/${P}-fix-rus.patch"
