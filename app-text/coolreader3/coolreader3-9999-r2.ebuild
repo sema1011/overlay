@@ -43,6 +43,9 @@ src_unpack() {
 }
 
 src_prepare() {
+
+	epatch "${FILESDIR}/freetype2.patch"
+	
 	# fix for amd64
 	if use amd64; then
 		sed -e 's/unsigned int/unsigned long/g' -i "${WORKDIR}/${P}/crengine/src/lvdocview.cpp" \
