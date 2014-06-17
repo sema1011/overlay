@@ -68,6 +68,10 @@ DEPEND="${RDEPEND}
 # cantata has no tests
 RESTRICT="test"
 
+PATCHES=(
+	"${FILESDIR}/${P}-rus-fix.patch"
+)
+
 src_prepare() {
 	kde4-base_src_prepare
 
