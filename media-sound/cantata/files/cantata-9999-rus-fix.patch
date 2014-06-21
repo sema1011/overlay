@@ -1,4 +1,4 @@
---- po/ru.po.old
+--- po/ru.po
 +++ po/ru.po
 @@ -7,8 +7,8 @@
  "Project-Id-Version: \n"
@@ -6,8 +6,8 @@
  "POT-Creation-Date: 2014-05-23 14:59+0100\n"
 -"PO-Revision-Date: 2013-11-20 22:05+0400\n"
 -"Last-Translator: Julia Dronova <juliette.tux@gmail.com>\n"
-+"PO-Revision-Date: 2014-06-14 22:56+0300\n"
-+"Last-Translator: Дмитрий <sema19689@gmail.com>\n"
++"PO-Revision-Date: 2014-06-19 13:47+0300\n"
++"Last-Translator: sema1011 <sema19689@gmail.com>\n"
  "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
  "Language: ru\n"
  "MIME-Version: 1.0\n"
@@ -38,6 +38,15 @@
  
  #: context/othersettings.cpp:109 gui/interfacesettings.cpp:583
  #, c-format
+@@ -178,7 +178,7 @@
+ 
+ #: context/songview.cpp:95
+ msgid "Scroll Lyrics"
+-msgstr ""
++msgstr "Прокрутка текста песен"
+ 
+ #: context/songview.cpp:96
+ msgid "Refresh Lyrics"
 @@ -470,6 +470,8 @@
  "Failed to create destination folder!<br/>Please check you have sufficient "
  "permissions."
@@ -110,6 +119,15 @@
  
  #. i18n: file: devices/albumdetails.ui:158
  #. i18n: ectx: property (text), widget (QTreeWidget, tracks)
+@@ -2699,7 +2701,7 @@
+ 
+ #: gui/playlistspage.cpp:359
+ msgid "Cannot add songs from '%1' to '%2'"
+-msgstr ""
++msgstr "Не удается добавить песни из '%1' на '%2'"
+ 
+ #: gui/plurals_kde.cpp:29
+ msgid "1 Track"
 @@ -2821,11 +2823,11 @@
  
  #: gui/preferencesdialog.cpp:100 scrobbling/scrobblingstatuslabel.cpp:39
@@ -133,7 +151,92 @@
  
  #: gui/searchpage.cpp:239
  msgid "Date:"
-@@ -3856,13 +3858,13 @@
+@@ -2930,7 +2932,7 @@
+ 
+ #: gui/searchpage.cpp:241
+ msgid "Any:"
+-msgstr ""
++msgstr "Любые:"
+ 
+ #: gui/searchpage.cpp:247
+ msgid "No tracks found."
+@@ -3375,6 +3377,7 @@
+ #: mpd/mpdconnection.cpp:373
+ msgid "Connection to %1 failed - please check your proxy settings"
+ msgstr ""
++"Подключение к %1 не удалось - пожалуйста, проверьте настройки прокси-сервера"
+ 
+ #: mpd/mpdconnection.cpp:374
+ msgid "Connection to %1 failed - incorrect password"
+@@ -3419,6 +3422,8 @@
+ #: mpd/mpdconnection.cpp:1564
+ msgid "Failed to send '%1' to %2. Please check %2 is registered with MPD."
+ msgstr ""
++"Не удалось отправить '%1' на %2. Пожалуйста, проверьте, что зарегистрирован "
++"%2 с MPD."
+ 
+ #: mpd/mpduser.cpp:50
+ msgid "Personal"
+@@ -3708,15 +3713,15 @@
+ 
+ #: online/podcastsearchdialog.cpp:513
+ msgid "Enter podcast URL..."
+-msgstr ""
++msgstr "Введите URL-адрес подкаста..."
+ 
+ #: online/podcastsearchdialog.cpp:514
+ msgid "Load"
+-msgstr ""
++msgstr "Загрузка"
+ 
+ #: online/podcastsearchdialog.cpp:521
+ msgid "Enter podcast URL below, and press 'Load'"
+-msgstr ""
++msgstr "Введите URL-адрес подкаста ниже и нажмите «Загрузка»"
+ 
+ #: online/podcastsearchdialog.cpp:548
+ msgid "Invalid URL!"
+@@ -3724,17 +3729,19 @@
+ 
+ #: online/podcastsearchdialog.cpp:558
+ msgid "Failed to fetch podcast!"
+-msgstr ""
++msgstr "Не удалось загрузить подкаст!"
+ 
+ #: online/podcastsearchdialog.cpp:563
+ msgid "Failed to parse podcast."
+-msgstr ""
++msgstr "Не удалось проанализировать подкаст."
+ 
+ #: online/podcastsearchdialog.cpp:567
+ msgid ""
+ "Cantata only supports audio podcasts! The URL entered contains only video "
+ "podcasts."
+ msgstr ""
++"Кантата поддерживает только аудио-подкасты! Введенный URL-адрес содержит "
++"только видео-подкасты."
+ 
+ #: online/podcastsearchdialog.cpp:585
+ msgid "Subscribe"
+@@ -3742,7 +3749,7 @@
+ 
+ #: online/podcastsearchdialog.cpp:603
+ msgid "Enter URL"
+-msgstr ""
++msgstr "Введите URL-адрес"
+ 
+ #: online/podcastsearchdialog.cpp:603
+ msgid "Manual podcast URL"
+@@ -3758,7 +3765,7 @@
+ 
+ #: online/podcastsearchdialog.cpp:623
+ msgid "Add Podcast Subscription"
+-msgstr ""
++msgstr "Добавить подкаст подписку"
+ 
+ #: online/podcastsearchdialog.cpp:698
+ msgid "Browse %1"
+@@ -3856,13 +3863,13 @@
  #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
  #: po/rc.cpp:3 po/rc.cpp:654 rc.cpp:3 rc.cpp:654
  msgid "Background Image"
@@ -149,7 +252,7 @@
  
  #. i18n: file: context/othersettings.ui:46
  #. i18n: ectx: property (text), widget (QRadioButton, contextBackdrop_custom)
-@@ -3874,7 +3876,7 @@
+@@ -3874,7 +3881,7 @@
  #. i18n: ectx: property (text), widget (QRadioButton, playQueueBackground_custom)
  #: po/rc.cpp:12 po/rc.cpp:663 rc.cpp:12 rc.cpp:663
  msgid "Custom image:"
@@ -158,7 +261,7 @@
  
  #. i18n: file: context/othersettings.ui:66
  #. i18n: ectx: property (text), widget (QLabel, label_4b)
-@@ -3910,7 +3912,7 @@
+@@ -3910,7 +3917,7 @@
  #. i18n: ectx: property (text), widget (QLabel, label_4)
  #: po/rc.cpp:21 po/rc.cpp:672 rc.cpp:21 rc.cpp:672
  msgid "Opacity:"
@@ -167,7 +270,7 @@
  
  #. i18n: file: context/othersettings.ui:152
  #. i18n: ectx: property (text), widget (QLabel, contextBackdropOpacityLabel)
-@@ -3923,7 +3925,7 @@
+@@ -3923,19 +3930,19 @@
  #: po/rc.cpp:25 po/rc.cpp:676 rc.cpp:25 rc.cpp:676
  #, no-c-format
  msgid "40%"
@@ -176,7 +279,28 @@
  
  #. i18n: file: context/othersettings.ui:167
  #. i18n: ectx: property (text), widget (BuddyLabel, contextSwitchTimeLabel)
-@@ -3966,7 +3968,7 @@
+ #: po/rc.cpp:28 rc.cpp:28
+ msgid "Automatically switch to view after:"
+-msgstr ""
++msgstr "Автоматическое переключение для просмотра после:"
+ 
+ #. i18n: file: context/othersettings.ui:177
+ #. i18n: ectx: property (specialValueText), widget (QSpinBox, contextSwitchTime)
+ #: po/rc.cpp:31 rc.cpp:31
+ msgid "Do not auto-switch"
+-msgstr ""
++msgstr "Не допускать автоматического переключения"
+ 
+ #. i18n: file: context/othersettings.ui:180
+ #. i18n: ectx: property (suffix), widget (QSpinBox, contextSwitchTime)
+@@ -3961,12 +3968,14 @@
+ msgid ""
+ "Darken background, and use white text, regardless of current color palette."
+ msgstr ""
++"Затемнить фон и использовать белый текст, независимо от текущей цветовой "
++"палитры."
+ 
+ #. i18n: file: context/othersettings.ui:203
  #. i18n: ectx: property (text), widget (QCheckBox, contextAlwaysCollapsed)
  #: po/rc.cpp:43 rc.cpp:43
  msgid "Always collapse into a single pane"
@@ -185,7 +309,7 @@
  
  #. i18n: file: context/othersettings.ui:206
  #. i18n: ectx: property (toolTip), widget (QCheckBox, contextAlwaysCollapsed)
-@@ -4069,7 +4071,7 @@
+@@ -4069,7 +4078,7 @@
  #. i18n: ectx: property (text), widget (QCheckBox, overwrite)
  #: po/rc.cpp:89 rc.cpp:89
  msgid "Overwrite songs"
@@ -194,7 +318,16 @@
  
  #. i18n: file: devices/actiondialog.ui:170
  #. i18n: ectx: property (text), widget (QLabel, songCountLabel)
-@@ -4153,7 +4155,7 @@
+@@ -4123,7 +4132,7 @@
+ #. i18n: ectx: property (text), widget (QCheckBox, singleArtist)
+ #: po/rc.cpp:119 rc.cpp:119
+ msgid "Single artist"
+-msgstr ""
++msgstr "Сингл артист"
+ 
+ #. i18n: file: devices/audiocdsettings.ui:29
+ #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+@@ -4153,7 +4162,7 @@
  #. i18n: ectx: property (text), widget (QCheckBox, cdAuto)
  #: po/rc.cpp:146 rc.cpp:146
  msgid "Lookup information as soon as CD is inserted"
@@ -203,7 +336,7 @@
  
  #. i18n: file: devices/audiocdsettings.ui:94
  #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-@@ -4253,13 +4255,13 @@
+@@ -4253,13 +4262,13 @@
  #. i18n: ectx: property (text), widget (QCheckBox, autoScan)
  #: po/rc.cpp:179 rc.cpp:179
  msgid "Automatically scan music when attached"
@@ -219,7 +352,25 @@
  
  #. i18n: file: devices/devicepropertieswidget.ui:131
  #. i18n: ectx: property (title), widget (QGroupBox, filenamesGroupBox)
-@@ -4331,7 +4333,7 @@
+@@ -4307,7 +4316,7 @@
+ #. i18n: ectx: property (text), widget (QCheckBox, asciiOnly)
+ #: po/rc.cpp:194 po/rc.cpp:1025 rc.cpp:194 rc.cpp:1025
+ msgid "Use only ASCII characters"
+-msgstr ""
++msgstr "Используйте только символы ASCII"
+ 
+ #. i18n: file: devices/devicepropertieswidget.ui:191
+ #. i18n: ectx: property (text), widget (QCheckBox, replaceSpaces)
+@@ -4319,7 +4328,7 @@
+ #. i18n: ectx: property (text), widget (QCheckBox, replaceSpaces)
+ #: po/rc.cpp:197 po/rc.cpp:1028 rc.cpp:197 rc.cpp:1028
+ msgid "Replace spaces with underscores"
+-msgstr ""
++msgstr "Заменить пробелы на подчеркивания"
+ 
+ #. i18n: file: devices/devicepropertieswidget.ui:198
+ #. i18n: ectx: property (text), widget (QCheckBox, ignoreThe)
+@@ -4331,7 +4340,7 @@
  #. i18n: ectx: property (text), widget (QCheckBox, ignoreThe)
  #: po/rc.cpp:200 po/rc.cpp:1031 rc.cpp:200 rc.cpp:1031
  msgid "Ignore 'The' in artist names"
@@ -228,7 +379,7 @@
  
  #. i18n: file: devices/devicepropertieswidget.ui:208
  #. i18n: ectx: property (title), widget (QGroupBox, transcoderFrame)
-@@ -4343,7 +4345,7 @@
+@@ -4343,7 +4352,7 @@
  #. i18n: ectx: property (text), widget (QCheckBox, transcoderWhenDifferent)
  #: po/rc.cpp:206 rc.cpp:206
  msgid "Only transcode if source file is of a different format"
@@ -237,7 +388,7 @@
  
  #. i18n: file: devices/filenameschemedialog.ui:38
  #. i18n: ectx: property (text), widget (QLabel, label_album_example)
-@@ -4370,7 +4372,7 @@
+@@ -4370,7 +4379,7 @@
  #. i18n: ectx: property (toolTip), widget (QPushButton, albumTitle)
  #: po/rc.cpp:221 rc.cpp:221
  msgid "The name of the album."
@@ -246,7 +397,7 @@
  
  #. i18n: file: devices/filenameschemedialog.ui:92
  #. i18n: ectx: property (text), widget (QPushButton, albumTitle)
-@@ -4382,13 +4384,13 @@
+@@ -4382,13 +4391,13 @@
  #. i18n: ectx: property (toolTip), widget (QPushButton, composer)
  #: po/rc.cpp:227 rc.cpp:227
  msgid "The composer."
@@ -262,7 +413,16 @@
  
  #. i18n: file: devices/filenameschemedialog.ui:112
  #. i18n: ectx: property (text), widget (QPushButton, trackArtist)
-@@ -4426,7 +4428,7 @@
+@@ -4400,7 +4409,7 @@
+ #. i18n: ectx: property (toolTip), widget (QPushButton, trackTitle)
+ #: po/rc.cpp:239 rc.cpp:239
+ msgid "The track title (without <i>Track Artist</i>)."
+-msgstr ""
++msgstr "Название трека (без <i>Артист</i>)."
+ 
+ #. i18n: file: devices/filenameschemedialog.ui:122
+ #. i18n: ectx: property (text), widget (QPushButton, trackTitle)
+@@ -4426,7 +4435,7 @@
  #. i18n: ectx: property (toolTip), widget (QPushButton, trackNo)
  #: po/rc.cpp:251 rc.cpp:251
  msgid "The track number."
@@ -271,7 +431,7 @@
  
  #. i18n: file: devices/filenameschemedialog.ui:154
  #. i18n: ectx: property (text), widget (QPushButton, trackNo)
-@@ -4452,13 +4454,13 @@
+@@ -4452,13 +4461,13 @@
  #. i18n: ectx: property (toolTip), widget (QPushButton, year)
  #: po/rc.cpp:263 rc.cpp:263
  msgid "The year of the album's release."
@@ -287,7 +447,7 @@
  
  #. i18n: file: devices/remotedevicepropertieswidget.ui:17
  #. i18n: ectx: property (text), widget (QLabel, connectionNote)
-@@ -4734,7 +4736,7 @@
+@@ -4734,7 +4743,7 @@
  #. i18n: ectx: property (toolTip), widget (QToolButton, addFileButton)
  #: po/rc.cpp:425 rc.cpp:425
  msgid "Add a local file"
@@ -296,7 +456,7 @@
  
  #. i18n: file: gui/filesettings.ui:29
  #. i18n: ectx: property (text), widget (QCheckBox, storeCoversInMpdDir)
-@@ -4747,6 +4749,7 @@
+@@ -4747,6 +4756,7 @@
  #: po/rc.cpp:431 po/rc.cpp:518 rc.cpp:431 rc.cpp:518
  msgid "Save downloaded covers, and artist images, in music folder"
  msgstr ""
@@ -304,7 +464,27 @@
  
  #. i18n: file: gui/filesettings.ui:36
  #. i18n: ectx: property (text), widget (QCheckBox, storeLyricsInMpdDir)
-@@ -5060,19 +5063,20 @@
+@@ -5014,6 +5024,9 @@
+ "music folder hierarchy if this is 2 levels deep. i.e. 'Artist/Album/Tracks'."
+ "</i>"
+ msgstr ""
++"<i><b>ВНИМАНИЕ:</b> Cantata может сохранять только фоны и изображения "
++"артистов в пределах иерархии музыкальных папок, если это 2 уровня "
++"вложенности. т.е. 'Исполнитель/Альбом /Tрек'.</i>"
+ 
+ #. i18n: file: gui/initialsettingswizard.ui:830
+ #. i18n: ectx: property (text), widget (StateLabel, httpNote)
+@@ -5038,6 +5051,9 @@
+ "used to customise Cantata's appearance, as well as to add extra MPD hosts, "
+ "etc."
+ msgstr ""
++"Cantata теперь настроен! <br/> <br/>Диалоговое окно конфигурации может быть "
++"использовано для настройки внешнего вида, а также для добавления "
++"дополнительных узлов MPD и т.д."
+ 
+ #. i18n: file: gui/initialsettingswizard.ui:930
+ #. i18n: ectx: property (text), widget (QLabel, groupWarningLabel)
+@@ -5060,19 +5076,20 @@
  #. i18n: ectx: attribute (title), widget (QWidget, sidebarTab)
  #: po/rc.cpp:545 rc.cpp:545
  msgid "Sidebar"
@@ -327,7 +507,7 @@
  
  #. i18n: file: gui/interfacesettings.ui:77
  #. i18n: ectx: property (text), widget (StateLabel, sbPlayQueueLabel)
-@@ -5096,25 +5100,25 @@
+@@ -5096,25 +5113,25 @@
  #. i18n: ectx: property (text), widget (BuddyLabel, sbPositionLabel)
  #: po/rc.cpp:566 rc.cpp:566
  msgid "Position:"
@@ -357,7 +537,7 @@
  
  #. i18n: file: gui/interfacesettings.ui:212
  #. i18n: ectx: property (text), widget (BuddyLabel, label_5b)
-@@ -5132,13 +5136,13 @@
+@@ -5132,13 +5149,13 @@
  #. i18n: ectx: property (text), widget (QCheckBox, libraryArtistImage)
  #: po/rc.cpp:587 rc.cpp:587
  msgid "Show artist images"
@@ -373,7 +553,7 @@
  
  #. i18n: file: gui/interfacesettings.ui:264
  #. i18n: ectx: property (text), widget (QLabel, label_8)
-@@ -5166,7 +5170,7 @@
+@@ -5166,7 +5183,7 @@
  #. i18n: ectx: property (text), widget (QCheckBox, playQueueStartClosed)
  #: po/rc.cpp:615 po/rc.cpp:642 rc.cpp:615 rc.cpp:642
  msgid "Initially collapse albums"
@@ -382,7 +562,7 @@
  
  #. i18n: file: gui/interfacesettings.ui:360
  #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-@@ -5202,31 +5206,31 @@
+@@ -5202,31 +5219,31 @@
  #. i18n: ectx: property (text), widget (QLabel, label_5)
  #: po/rc.cpp:633 rc.cpp:633
  msgid "Search view style:"
@@ -419,7 +599,7 @@
  
  #. i18n: file: gui/interfacesettings.ui:648
  #. i18n: ectx: attribute (title), widget (QWidget, tab_7)
-@@ -5238,43 +5242,43 @@
+@@ -5238,43 +5255,43 @@
  #. i18n: ectx: property (text), widget (QCheckBox, systemTrayPopup)
  #: po/rc.cpp:682 rc.cpp:682
  msgid "Show popup messages when changing tracks"
@@ -470,7 +650,23 @@
  
  #. i18n: file: gui/interfacesettings.ui:725
  #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
-@@ -5305,7 +5309,7 @@
+@@ -5292,7 +5309,7 @@
+ #. i18n: ectx: property (text), widget (QCheckBox, groupSingle)
+ #: po/rc.cpp:709 rc.cpp:709
+ msgid "Group single track albums"
+-msgstr ""
++msgstr "Группировать альбомы с сингл треками"
+ 
+ #. i18n: file: gui/interfacesettings.ui:746
+ #. i18n: ectx: property (toolTip), widget (QCheckBox, useComposer)
+@@ -5300,12 +5317,14 @@
+ msgid ""
+ "Use the 'Composer' tag, and not 'Artist' or 'Album Artist', to group albums."
+ msgstr ""
++"Используйте тег 'Композитор', а не 'Исполнитель' или 'Исполнитель альбома', "
++"чтобы группировать альбомы."
+ 
+ #. i18n: file: gui/interfacesettings.ui:749
  #. i18n: ectx: property (text), widget (QCheckBox, useComposer)
  #: po/rc.cpp:715 rc.cpp:715
  msgid "Group albums by composer"
@@ -479,7 +675,7 @@
  
  #. i18n: file: gui/interfacesettings.ui:756
  #. i18n: ectx: property (toolTip), widget (QCheckBox, filteredOnly)
-@@ -5322,25 +5326,25 @@
+@@ -5322,25 +5341,25 @@
  #. i18n: ectx: property (text), widget (QCheckBox, filteredOnly)
  #: po/rc.cpp:721 rc.cpp:721
  msgid "Only act on songs that pass filtering"
@@ -509,7 +705,14 @@
  
  #. i18n: file: gui/interfacesettings.ui:787
  #. i18n: ectx: property (text), widget (QCheckBox, forceSingleClick)
-@@ -5372,7 +5376,7 @@
+@@ -5366,13 +5385,13 @@
+ #. i18n: ectx: property (text), widget (QCheckBox, touchFriendly)
+ #: po/rc.cpp:741 rc.cpp:741
+ msgid "Make interface more touch friendly"
+-msgstr ""
++msgstr "Сделать интерфейс более дружественным"
+ 
+ #. i18n: file: gui/interfacesettings.ui:805
  #. i18n: ectx: property (text), widget (BuddyLabel, langLabel)
  #: po/rc.cpp:744 rc.cpp:744
  msgid "Language:"
@@ -518,7 +721,7 @@
  
  #. i18n: file: gui/interfacesettings.ui:836
  #. i18n: ectx: property (text), widget (StateLabel, singleClickLabel)
-@@ -5446,13 +5450,13 @@
+@@ -5446,13 +5465,13 @@
  #. i18n: ectx: property (text), widget (BuddyLabel, crossfadingLabel)
  #: po/rc.cpp:786 rc.cpp:786
  msgid "Crossfade between tracks:"
@@ -534,7 +737,7 @@
  
  #. i18n: file: gui/playbacksettings.ui:151
  #. i18n: ectx: property (text), widget (BuddyLabel, replayGainLabel)
-@@ -5470,7 +5474,7 @@
+@@ -5470,7 +5489,7 @@
  #. i18n: ectx: property (text), widget (QLabel, outputsViewLabel)
  #: po/rc.cpp:801 rc.cpp:801
  msgid "Use the checkboxes below to control the active outputs."
@@ -543,7 +746,7 @@
  
  #. i18n: file: gui/serversettings.ui:35
  #. i18n: ectx: property (text), widget (QLabel, label)
-@@ -5607,7 +5611,7 @@
+@@ -5607,13 +5626,13 @@
  #. i18n: ectx: property (text), widget (QLabel, label)
  #: po/rc.cpp:884 rc.cpp:884
  msgid "Use the checkboxes below to configure the list of active services."
@@ -552,7 +755,14 @@
  
  #. i18n: file: scrobbling/scrobblingsettings.ui:29
  #. i18n: ectx: property (text), widget (BuddyLabel, scrobblerLabel)
-@@ -5644,13 +5648,13 @@
+ #: po/rc.cpp:890 rc.cpp:890
+ msgid "Scrobble using:"
+-msgstr ""
++msgstr "Сервис скробблера:"
+ 
+ #. i18n: file: scrobbling/scrobblingsettings.ui:72
+ #. i18n: ectx: property (text), widget (BuddyLabel, statusLabel)
+@@ -5644,13 +5663,13 @@
  #. i18n: ectx: property (text), widget (QCheckBox, enableScrobbling)
  #: po/rc.cpp:908 rc.cpp:908
  msgid "Scrobble tracks"
@@ -568,7 +778,7 @@
  
  #. i18n: file: streams/digitallyimportedsettings.ui:29
  #. i18n: ectx: property (text), widget (QLabel, label)
-@@ -5710,7 +5714,7 @@
+@@ -5710,7 +5729,7 @@
  #. i18n: ectx: property (text), widget (QLabel, label)
  #: po/rc.cpp:947 rc.cpp:947
  msgid "Use the checkboxes below to configure the list of active providers."
@@ -577,7 +787,7 @@
  
  #. i18n: file: streams/streamssettings.ui:47
  #. i18n: ectx: property (text), widget (QPushButton, configureButton)
-@@ -5783,6 +5787,8 @@
+@@ -5783,6 +5802,8 @@
  "<i><b>NOTE</b> Multiple genres should be separated via a semicolon (e.g. "
  "'Rock;Hard Rock')</i>"
  msgstr ""
@@ -586,7 +796,7 @@
  
  #. i18n: file: tags/trackorganiser.ui:115
  #. i18n: ectx: property (text), widget (QTreeWidget, files)
-@@ -5910,11 +5916,11 @@
+@@ -5910,11 +5931,11 @@
  
  #: replaygain/rgdialog.cpp:506 replaygain/rgdialog.cpp:516
  msgid "Original: %1 dB"
@@ -600,7 +810,7 @@
  
  #: replaygain/rgdialog.cpp:628 tags/trackorganiser.cpp:465
  msgid "Remove the selected tracks from the list?"
-@@ -5926,63 +5932,64 @@
+@@ -5926,68 +5947,69 @@
  
  #: scrobbling/scrobbler.cpp:91
  msgid "Invalid service"
@@ -679,7 +889,13 @@
  
  #: scrobbling/scrobblingsettings.cpp:54
  msgctxt "scrobbler name (via MPD)"
-@@ -5999,22 +6006,22 @@
+ msgid "%1 (via MPD)"
+-msgstr ""
++msgstr "%1 (через MPD)"
+ 
+ #: scrobbling/scrobblingsettings.cpp:66
+ msgid ""
+@@ -5999,22 +6021,22 @@
  #: scrobbling/scrobblingsettings.cpp:99
  #: streams/digitallyimportedsettings.cpp:113
  msgid "Authenticating..."
@@ -706,7 +922,7 @@
  
  #: streams/digitallyimportedsettings.cpp:36
  msgid "Digitally Imported Settings"
-@@ -6070,11 +6077,11 @@
+@@ -6070,11 +6092,11 @@
  
  #: streams/streamproviderlistdialog.cpp:70
  msgid "Install/Update Stream Providers"
@@ -720,7 +936,7 @@
  
  #: streams/streamproviderlistdialog.cpp:123
  msgid "Digitally Imported"
-@@ -6082,44 +6089,44 @@
+@@ -6082,44 +6104,44 @@
  
  #: streams/streamproviderlistdialog.cpp:124
  msgid "Local and National Radio (ListenLive)"
@@ -775,7 +991,7 @@
  
  #: streams/streamspage.cpp:58
  msgid "Import Streams Into Favorites"
-@@ -6212,15 +6219,15 @@
+@@ -6212,15 +6234,15 @@
  
  #: streams/streamspage.cpp:626
  msgid "Added '%1'' to favorites"
@@ -794,7 +1010,7 @@
  
  #: streams/streamssettings.cpp:133
  msgid "*.streams|Cantata Streams"
-@@ -6481,7 +6488,7 @@
+@@ -6481,7 +6503,7 @@
  
  #: widgets/genrecombo.cpp:41
  msgid "Filter On Genre"
@@ -803,7 +1019,7 @@
  
  #: widgets/genrecombo.cpp:63
  msgid "All Genres"
-@@ -6533,7 +6540,7 @@
+@@ -6533,7 +6555,7 @@
  
  #: widgets/tableview.cpp:88
  msgid "Stretch Columns To Fit Window"
