@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
 DEPEND=net-misc/dropbox >=xfce-base/thunar-1.2 virtual/pkgconfig >=sys-apps/sed-4 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) dev-lang/python !dev-lang/python[-threads]
 DESCRIPTION=Plugin for thunar that adds context-menu items for dropbox.
-EAPI=4
+EAPI=5
 HOMEPAGE=http://www.softwarebakery.com/maato/thunar-dropbox.html
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 RDEPEND=net-misc/dropbox >=xfce-base/thunar-1.2 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=http://www.softwarebakery.com/maato/files/thunar-dropbox/thunar-dropbox-0.2.0.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	waf-utils	6fae459bd65a96ab400f7b9dc8a3fc72
-_md5_=a6e4be30ab2a5b3b109f172b91eadc85
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	waf-utils	8ba4703b0e4f03e42a8f6e7b8aabd9e6
+_md5_=57f81b06f87c939dcda3501577fe0c07

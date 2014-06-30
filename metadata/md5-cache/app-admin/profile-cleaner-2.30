@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile configure install prepare unpack
+DESCRIPTION=Simple script to vacuum and reindex sqlite databases used by Firefox and by Chrome/Chromium.
+EAPI=5
+HOMEPAGE=https://github.com/graysky2/profile-cleaner
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=app-shells/bash sys-devel/bc sys-apps/coreutils sys-apps/findutils sys-apps/grep sys-apps/sed sys-process/parallel dev-db/sqlite:3
+SLOT=0
+SRC_URI=http://repo-ck.com/source/profile-cleaner/profile-cleaner-2.30.tar.xz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=72c7df6cc8d4d418b740f3d5d97479fe
