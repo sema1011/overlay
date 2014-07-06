@@ -1,19 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: This ebuild is from sema1011 overlay $
+# $Header: $
 
-EAPI="5"
+EAPI=5
 
-inherit base bzr
+inherit base
 
 DESCRIPTION="The official elementary GTK theme designed to be smooth, attractive, fast, and usable"
 HOMEPAGE="https://launchpad.net/egtk"
-EBZR_REPO_URI="lp:egtk"
+SRC_URI="https://launchpad.net/egtk/3.x/${PV}/+download/elementary.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
-IUSE="+gtk +gtk3 +icons +wallpapers"
+KEYWORDS="x86 amd64"
+IUSE="dark +gtk +gtk3 +icons +wallpapers"
 
 DEPEND="
 	x11-themes/vanilla-dmz-aa-xcursors"
@@ -37,19 +37,20 @@ RDEPEND="${DEPEND}
 
 RESTRICT="binchecks mirror strip"
 
-pkg_setup() {
-	DOCS=( AUTHORS CONTRIBUTORS COPYING )
-	THEMES="index.theme metacity-1 gtk-2.0 gtk-3.0"
-}
+S="${WORKDIR}/elementary"
+DOCS=( AUTHORS CONTRIBUTORS COPYING )
 
 src_prepare() {
+	# Add support for dark theming
+	use dark && epatch "${FILESDIR}/${P}-dark.patch"
+
 	# Correct cursor theme name
 	sed -i 's/DMZ-Black/Vanilla-DMZ-AA/' index.theme
 }
 
 src_install() {
 	insinto /usr/share/themes/elementary
-	doins -r ${THEMES}
+	doins -r index.theme metacity-1 gtk-2.0 gtk-3.0
 
 	base_src_install_docs
 }
