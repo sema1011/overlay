@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-PLOCALES="cs_CZ cs de es_MX es fr gl hu it pl_PL pl pt_BR pt_PT ro_RO ru si_LK uk zh_CN zh_TW"
+PLOCALES="cs_CZ cs de es_MX es fr gl hu it pl_PL pl pt_BR pt_PT ru uk zh_CN zh_TW"
 
 EGIT_REPO_URI="https://github.com/flacon/flacon.git"
 

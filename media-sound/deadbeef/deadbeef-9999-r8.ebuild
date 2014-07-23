@@ -83,9 +83,6 @@ src_prepare() {
 		-i "${S}/plugins/wildmidi/wildmidiplug.c"
 	fi
 
-	# remove unity trash
-	epatch "${FILESDIR}/desktop-2.patch"
-
 	for lang in ${LANGS};do
 		for x in ${lang};do
 			if ! use linguas_${x}; then
