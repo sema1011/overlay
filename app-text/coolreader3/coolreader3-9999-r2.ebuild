@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-EGIT_REPO_URI="git://crengine.git.sourceforge.net/gitroot/crengine/crengine"
+EGIT_REPO_URI="git://git.code.sf.net/p/crengine/crengine"
 
 inherit cmake-utils
 
@@ -12,7 +12,6 @@ HYP_ARCH="AlReader2.Hyphen.zip"
 
 DESCRIPTION="CoolReader - reader of eBook files (fb2,epub,htm,rtf,txt)"
 HOMEPAGE="http://www.coolreader.org/"
-#SRC_URI="hyphen? ( http://alreader.kms.ru/AlReader/${HYP_ARCH} )"
 SRC_URI="hyphen? ( http://www.alreader.com/downloads/${HYP_ARCH} )"
 inherit git-2
 
@@ -79,5 +78,4 @@ src_install() {
 			doins {} \;
 	fi
 	dosym ../fonts/corefonts /usr/share/crengine/fonts
-#	dodoc "${FILESDIR}/README"
 }

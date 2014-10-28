@@ -1,21 +1,36 @@
---- crengine/src/old-lvfntman.cpp
-+++ crengine/src/lvfntman.cpp
-@@ -43,11 +43,11 @@
+--- a/crengine/src/копия lvfntman.cpp
++++ b/crengine/src/lvfntman.cpp
+@@ -42,21 +42,9 @@
+ 
  //#include <ft2build.h>
  
- #ifdef ANDROID
+-#ifdef ANDROID
+-#ifdef USE_FREETYPE2
+ #include "freetype2/config/ftheader.h"
+ #include "freetype2/freetype.h"
+-#else
 -#include "freetype/config/ftheader.h"
 -#include "freetype/freetype.h"
-+#include "freetype2/config/ftheader.h"
-+#include "freetype2/freetype.h"
- #else
- 
+-#endif
+-#else
+-
+-#ifdef USE_FREETYPE2
+ #include <freetype2/config/ftheader.h>
+-#else
 -#include <freetype/config/ftheader.h>
-+#include <freetype2/config/ftheader.h>
+-#endif
  //#include <ft2build.h>
  #include FT_FREETYPE_H
  //#include <freetype/freetype.h>
-@@ -3996,4 +3996,3 @@
+@@ -66,7 +54,6 @@
+     #include <fontconfig/fontconfig.h>
+ #endif
+ 
+-#endif
+ 
+ 
+ #if COLOR_BACKBUFFER==0
+@@ -4124,4 +4111,3 @@
              && r1.getHintingMode()==r2.getHintingMode()
              ;
  }
