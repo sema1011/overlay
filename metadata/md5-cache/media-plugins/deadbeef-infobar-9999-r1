@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=|| ( <media-sound/deadbeef-0.6[curl] <media-sound/deadbeef-0.6[cover] <media-sound/deadbeef-0.6[lastfm] ) gtk2? ( <media-sound/deadbeef-0.6[gtk2] ) gtk3? ( <media-sound/deadbeef-0.6[gtk3] ) dev-libs/libxml2
 REQUIRED_USE=|| ( gtk2 gtk3 )
 SLOT=0
-_eclasses_=eutils	025442f2eecab39ad0b4e541b6e142af	mercurial	6bb94b704fb44f17b02994ca3fa756a9	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	mercurial	2fbda5894dda6392b71334ee9a92de0b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=7af5a65431d2dbbc637f8f42a45278d8

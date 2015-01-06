@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=net-misc/dropbox >=xfce-base/thunar-1.2 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=http://www.softwarebakery.com/maato/files/thunar-dropbox/thunar-dropbox-0.2.0.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	025442f2eecab39ad0b4e541b6e142af	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	waf-utils	8ba4703b0e4f03e42a8f6e7b8aabd9e6
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	waf-utils	b5ddb40c4095c9a1a3f6fd49d32fd922
 _md5_=57f81b06f87c939dcda3501577fe0c07

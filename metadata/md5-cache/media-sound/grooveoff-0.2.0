@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
-DEPEND=sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=sys-apps/sed-4
+DEPEND=sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=sys-apps/sed-4
 DESCRIPTION=Offline Grooveshark.com music
 EAPI=5
 HOMEPAGE=https://github.com/gcala/grooveoff
@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/qjson media-libs/phonon dev-qt/qtxmlpatterns:4 dev-qt/qtsvg:4 dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtdbus:4 media-libs/taglib
 SLOT=0
 SRC_URI=https://github.com/gcala/grooveoff/archive/v0.2.0.tar.gz -> grooveoff-0.2.0.tar.gz
-_eclasses_=cmake-utils	412d9e2d2c6f85f46dad595e68570d21	eutils	025442f2eecab39ad0b4e541b6e142af	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	32bd61b45c2f57e468b4ee7311fec8f5	gnome2-utils	f658eba3cc594a21cf6eef4af47daa90	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	f99a767f569b1f0731b3a1edd17c1d11	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	c263990f1b677b0f0be0a3299f179762	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=5d6f4a630a2e95fa916f21dd2620e2a0

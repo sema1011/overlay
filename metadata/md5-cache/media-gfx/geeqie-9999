@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install preinst unpack
+DEPEND=>=x11-libs/gtk+-2.4.0 lcms? ( media-libs/lcms ) exif? ( media-gfx/exiv2 ) virtual/libintl dev-util/pkgconfig sys-devel/gettext dev-vcs/subversion net-misc/rsync
+DESCRIPTION=Lightweight GTK-based image browser (fork of gqview).
+HOMEPAGE=http://geeqie.sourceforge.net/
+IUSE=lcms exif
+LICENSE=GPL-2
+RDEPEND=>=x11-libs/gtk+-2.4.0 lcms? ( media-libs/lcms ) exif? ( media-gfx/exiv2 ) virtual/libintl
+SLOT=0
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=cac0f6ba25ff38f4e9861a33183e5278

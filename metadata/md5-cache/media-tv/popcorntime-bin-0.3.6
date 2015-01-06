@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst postrm
+DESCRIPTION=Watch torrent movies instantly
+EAPI=5
+HOMEPAGE=http://popcorn.cdnjd.com/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-libs/nss gnome-base/gconf media-fonts/corefonts media-libs/alsa-lib x11-libs/gtk+:2
+RESTRICT=splitdebug strip
+SLOT=0
+SRC_URI=x86? ( http://get.popcorntime.io/build/Popcorn-Time-0.3.6-Linux32.tar.xz ) amd64? ( http://get.popcorntime.io/build/Popcorn-Time-0.3.6-Linux64.tar.xz )
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=acdf1cfdda5cd688b3c9d099d9debdda
