@@ -1,13 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: This ebuild is from sema1011 overlay $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screenfetch/screenfetch-9999.ebuild,v 1.4 2014/07/14 16:43:15 hwoarang Exp $
 
-EAPI="5"
+EAPI=4
 
 MY_PN="${PN/f/F}"
 DESCRIPTION="A Bash Screenshot Information Tool"
 HOMEPAGE="https://github.com/KittyKatt/screenFetch"
-
 if [[ ${PV} == *9999* ]]; then
 	inherit git-2
 	EGIT_REPO_URI="https://github.com/KittyKatt/screenFetch"
@@ -21,15 +20,12 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
+IUSE="X"
 
-RDEPEND="media-gfx/scrot
-	x11-apps/xdpyinfo
-	gnome-base/gsettings-desktop-schemas"
+DEPEND=""
+RDEPEND="X? ( media-gfx/scrot x11-apps/xdpyinfo )"
 
 src_install() {
-	dobin ${PN}-dev
-	# also known as screenfetch
-	dosym ${PN}-dev /usr/bin/${PN}
+	newbin ${PN}-dev ${PN}
 	dodoc CHANGELOG README.mkdn TODO
 }
