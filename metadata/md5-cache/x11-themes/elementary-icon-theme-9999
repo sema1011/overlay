@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
-DEPEND=>=dev-vcs/bzr-2.0.1 >=sys-apps/sed-4
+DEPEND=>=dev-vcs/bzr-2.6.0 >=sys-apps/sed-4
 DESCRIPTION=Elementary icon theme is designed to be smooth, sexy, clear, and efficient
 EAPI=5
 HOMEPAGE=https://launchpad.net/elementaryicons
@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=gtk? ( x11-libs/gtk+:2 ) icons? ( x11-themes/hicolor-icon-theme )
 RESTRICT=binchecks mirror strip
 SLOT=0
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	bzr	87fd9041fcbe23dbc8f0e65ce0df6c28	eutils	f99a767f569b1f0731b3a1edd17c1d11	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=base	2ec5c64f5de125f0c65a927c4c128fef	bzr	a1b66b9c760a0ab5113e62cf9b64d1fe	desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	gnome2-utils	c6060f4ab634aca444c4b2176b0f3877	ltprune	08f9e1d9ee0af8f5d9a7854efbcd8c0e	multilib	97f470f374f2e94ccab04a2fb21d811e	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	e4a9360924c5ce9f52e61342cde58512	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf	xdg-utils	89bb9f083a2590d9b447fd0b78a96186
 _md5_=2c7170dce453e1078d65fa0967e001a3
