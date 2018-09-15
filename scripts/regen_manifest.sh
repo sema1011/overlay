@@ -1,5 +1,5 @@
 #!/bin/sh
 
-find /home/sema/Overlay -iname '*.ebuild' | \
+find /home/gentoo/Portage -iname '*.ebuild' | \
 { [[ $@ ]] && grep $@ || cat; } | \
 xargs -I{} ebuild {} digest
