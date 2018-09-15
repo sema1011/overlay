@@ -8,7 +8,7 @@ inherit base
 DESCRIPTION="Vacuum and reindex browser sqlite databases"
 HOMEPAGE="https://bbs.archlinux.org/viewtopic.php?id=148062
 https://github.com/graysky2/profile-cleaner"
-SRC_URI="https://github.com/graysky2/profile-cleaner/archive/v$PV.tar.gz"
+SRC_URI="https://github.com/graysky2/profile-cleaner/archive/v$PV.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

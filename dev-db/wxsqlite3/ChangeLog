@@ -1,9 +1,0 @@
-# Copyright 1999-2014 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: $
-
-
-*wxsqlite3-3.0.5 (15 Nov 2013)
-
-  15 Nov 2013; Nikoli <nikoli@gmx.us> +metadata.xml, +wxsqlite3-3.0.5.ebuild:
-  wxsqlite3: initial ebuild
