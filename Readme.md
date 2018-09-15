@@ -15,3 +15,5 @@ git push -u origin master
 git add --all ;
 git commit -m "first commit" ;
 git push -u origin master
+
+https://toster.ru/q/231161
