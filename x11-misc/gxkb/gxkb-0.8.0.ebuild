@@ -6,8 +6,8 @@ EAPI=5
 inherit autotools
 
 DESCRIPTION="X11 keyboard indicator and switcher"
-HOMEPAGE="http://sourceforge.net/projects/gxkb/"
-SRC_URI="mirror://sourceforge/project/${PN}/${P}.tar.gz"
+HOMEPAGE="https://zen-tools.github.io/gxkb/"
+SRC_URI="https://github.com/zen-tools/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
