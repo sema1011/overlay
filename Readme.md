@@ -17,3 +17,5 @@ git commit -m "first commit" ;
 git push -u origin master
 
 https://toster.ru/q/231161
+
+wget https://gitweb.gentoo.org/sema1011/overlay.git/plain/metadata/home.conf -O /etc/portage/repos.conf/home
