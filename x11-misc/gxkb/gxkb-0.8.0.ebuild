@@ -24,8 +24,10 @@ DEPEND="
 	virtual/pkgconfig
 	${RDEPEND}
 "
+
 src_prepare() {
 	
    eautoreconf
    
 }
+

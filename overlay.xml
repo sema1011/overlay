@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>miramir</name>
+    <description lang="en">Home, experimental overlay for Gentoo</description>
+    <homepage>https://github.com/sema1011/overlay.git</homepage>
+    <owner type="person">
+      <email>sema19689@gmail.com</email>
+      <name>Home</name>
+    </owner>
+    <source type="git">https://github.com/sema1011/overlay.git</source>
+    <feed>https://github.com/sema1011/overlay/commits/master.atom</feed>
+  </repo>
+</repositories>
