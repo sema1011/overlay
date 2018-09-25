@@ -18,4 +18,4 @@ git push -u origin master
 
 https://toster.ru/q/231161
 
-wget https://gitweb.gentoo.org/sema1011/overlay.git/plain/metadata/home.conf -O /etc/portage/repos.conf/home
+wget https://raw.githubusercontent.com/sema1011/overlay/master/metadata/home.conf -O /etc/portage/repos.conf/home
