@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit rindeal
+#inherit rindeal
 
 ## functions: get_major_version, get_version_component_range
 inherit versionator
@@ -19,11 +19,11 @@ LICENSE="${PN}"
 
 # slot number is based on the upstream slotting mechanism which creates a new subdir
 # in `~/.smartgit/` for each new major release. The subdir name corresponds with SLOT.
-PV_MAJ="$(get_major_version)"
-PV_MIN="$(get_version_component_range 2)"
-
-SLOT="${PV_MAJ}$( (( PV_MIN )) && echo ".${PV_MIN}" )"
-PN_SLOTTED="${PN}${SLOT}"
+#PV_MAJ="$(get_major_version)"
+#PV_MIN="$(get_version_component_range 2)"
+SLOT="0"
+#SLOT="${PV_MAJ}$( (( PV_MIN )) && echo ".${PV_MIN}" )"
+#PN_SLOTTED="${PN}${SLOT}"
 SRC_URI_A=(
 	"https://www.syntevo.com/downloads/${PN}/${PN}-linux-${PV//./_}.tar.gz"
 	"https://www.syntevo.com/downloads/${PN}/archive/${PN}-linux-${PV//./_}.tar.gz"
@@ -39,7 +39,7 @@ RDEPEND_A=(
 
 RESTRICT+=" mirror strip"
 
-inherit arrays
+#inherit arrays
 
 S="${WORKDIR}/${PN}"
 
