@@ -2,42 +2,28 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-#inherit rindeal
 
-## functions: get_major_version, get_version_component_range
-inherit versionator
-
-## EXPORT_FUNCTIONS: src_prepare, pkg_preinst, pkg_postinst, pkg_postrm
-inherit xdg
-
-## functions: newicon, make_desktop_entry
-inherit desktop
+inherit versionator desktop xdg
 
 DESCRIPTION="Git client with support for GitHub Pull Requests+Comments, SVN and Mercurial"
-HOMEPAGE="https://www.syntevo.com/${PN}"
-LICENSE="${PN}"
+HOMEPAGE="https://www.syntevo.com/smartgit/"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
 
-# slot number is based on the upstream slotting mechanism which creates a new subdir
-# in `~/.smartgit/` for each new major release. The subdir name corresponds with SLOT.
-#PV_MAJ="$(get_major_version)"
-#PV_MIN="$(get_version_component_range 2)"
 SLOT="0"
-#SLOT="${PV_MAJ}$( (( PV_MIN )) && echo ".${PV_MIN}" )"
-#PN_SLOTTED="${PN}${SLOT}"
+
 SRC_URI_A=(
 	"https://www.syntevo.com/downloads/${PN}/${PN}-linux-${PV//./_}.tar.gz"
 	"https://www.syntevo.com/downloads/${PN}/archive/${PN}-linux-${PV//./_}.tar.gz"
 )
 
-KEYWORDS="~amd64"
-IUSE_A=( +system-jre )
 
 RDEPEND_A=(
 	# SmartGit can be started with Java 9 if smartgit.startup.allowJava9=true is set
 	"virtual/jre:1.8"
 )
 
-RESTRICT+=" mirror strip"
+RESTRICT="fetch"
 
 #inherit arrays
 
