@@ -44,8 +44,8 @@ src_compile() {
 }
 
 src_install() {
-	addread /usr/share/icons/hicolor/48x48/apps/org.gnome.FeedReader.svg
-	addwrite /usr/share/icons/hicolor/48x48/apps/org.gnome.FeedReader.svg
+	addread /usr/share/icons/hicolor/48x48/apps
+	addwrite /usr/share/icons/hicolor/48x48/apps
 	eninja -C builddir install 
 	
 }
