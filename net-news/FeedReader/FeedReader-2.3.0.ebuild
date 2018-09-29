@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit autotools gnome2-utils 
+inherit gnome2-utils fdo-mime
 
 DESCRIPTION="A simple client for online RSS services like tt-rss and others"
 HOMEPAGE="https://jangernert.github.io/FeedReader/"
@@ -34,22 +34,15 @@ RDEPEND="${DEPEND}
 	dev-libs/libpeas"
 
 src_compile() {
-	local params
-	rm -rf builddir
-	mkdir builddir
-	cd build
 
 	params="--prefix=/usr"
 
-	meson ${params}
-	ninja
+	meson builddir ${params}
+
 }
 
 src_install() {
-	cd builddir
-	DESTDIR="${D}" ninja install
-	cd ..
-	dodoc ${DOCS}
+	ninja -C builddir install
 }
 
 pkg_preinst() {
