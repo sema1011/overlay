@@ -31,7 +31,8 @@ RDEPEND="${DEPEND}
 	media-libs/gstreamer
 	media-libs/gst-plugins-base
 	net-misc/curl
-	dev-libs/libpeas"
+	dev-libs/libpeas
+	net-libs/gnome-online-accounts"
 
 src_compile() {
 
