@@ -45,6 +45,6 @@ src_compile() {
 
 src_install() {
 	
-	eninja -C builddir install
+	eninja -C builddir install ${ROOT}
 	
 }
