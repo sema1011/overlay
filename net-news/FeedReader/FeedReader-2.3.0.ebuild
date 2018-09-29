@@ -23,7 +23,7 @@ RDEPEND="${DEPEND}
 	dev-libs/json-glib
 	net-libs/webkit-gtk
 	dev-db/sqlite
-	app-crypt/libsecret
+	app-crypt/libsecret[vala]
 	x11-libs/libnotify
 	dev-libs/libxml2
 	net-libs/rest
@@ -32,7 +32,7 @@ RDEPEND="${DEPEND}
 	media-libs/gst-plugins-base
 	net-misc/curl
 	dev-libs/libpeas
-	net-libs/gnome-online-accounts
+	net-libs/gnome-online-accounts[vala]
 	dev-libs/gumbo"
 
 src_compile() {
