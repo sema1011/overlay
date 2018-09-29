@@ -14,8 +14,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-util/meson-0.32.0
-		dev-util/ninja"
-
+		dev-util/ninja
+		"
 RDEPEND="${DEPEND}
 	>=dev-lang/vala-0.26
 	>=x11-libs/gtk+-3.20
