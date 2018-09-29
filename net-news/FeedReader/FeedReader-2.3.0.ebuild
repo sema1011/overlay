@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit autotools
+inherit autotools gnome2-utils 
 
 DESCRIPTION="A simple client for online RSS services like tt-rss and others"
 HOMEPAGE="https://jangernert.github.io/FeedReader/"
@@ -39,9 +39,9 @@ src_compile() {
 	mkdir builddir
 	cd build
 
-	params="--prefix=/usr --libdir=lib --buildtype=release -Ddo-post-install=false"
+	params="--prefix=/usr"
 
-	meson ${params} -Db_lundef=false ..
+	meson ${params}
 	ninja
 }
 
