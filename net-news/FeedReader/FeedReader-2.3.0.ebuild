@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit gnome2-utils fdo-mime
+inherit ninja-utils
 
 DESCRIPTION="A simple client for online RSS services like tt-rss and others"
 HOMEPAGE="https://jangernert.github.io/FeedReader/"
@@ -45,6 +45,6 @@ src_compile() {
 
 src_install() {
 	
-	ninja -C builddir install
+	eninja -C builddir install
 	
 }
