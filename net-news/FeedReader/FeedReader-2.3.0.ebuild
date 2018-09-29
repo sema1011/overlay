@@ -42,7 +42,9 @@ src_compile() {
 }
 
 src_install() {
+	
 	ninja -C builddir install
+	
 }
 
 pkg_preinst() {
