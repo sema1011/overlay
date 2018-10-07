@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 EAPI=5
 
-WX_GTK_VER="2.8"
+WX_GTK_VER="3.0"
 inherit eutils wxwidgets
 
 DESCRIPTION="E-book collection manager"
