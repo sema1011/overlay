@@ -41,7 +41,7 @@ src_prepare() {
 		3rdparty/wxsqlite3 \
 	|| die
 
-	sed -i -e 's/-lwxsqlite3-2.8/-lwxcode_gtk2u_wxsqlite3-2.8/' \
+	sed -i -e 's/-lwxsqlite3-2.8/-lwxcode_gtk2u_wxsqlite3-3.0/' \
 		configure.in configure || die
 }
 
