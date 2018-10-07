@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=6
 inherit autotools
 
 DESCRIPTION="X11 keyboard indicator and switcher"
@@ -30,4 +30,3 @@ src_prepare() {
    eautoreconf
    
 }
-
