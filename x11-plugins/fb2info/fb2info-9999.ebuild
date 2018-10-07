@@ -1,8 +1,8 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-
-inherit git-2
+EAPI=5
+inherit git-r3
 
 DESCRIPTION="Simple fb2 thumbnauler for Nautilus and Caja."
 HOMEPAGE="https://github.com/VitalD/fb2info"

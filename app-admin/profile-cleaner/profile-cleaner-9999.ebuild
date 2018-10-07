@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-inherit git-r3 base 
+inherit git-r3
 
 DESCRIPTION="Vacuum and reindex browser sqlite databases"
 HOMEPAGE="https://bbs.archlinux.org/viewtopic.php?id=148062
