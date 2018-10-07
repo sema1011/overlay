@@ -6,12 +6,11 @@ inherit git-r3
 
 DESCRIPTION="Simple fb2 thumbnauler for Nautilus and Caja."
 HOMEPAGE="https://github.com/VitalD/fb2info"
-EGIT_REPO_URI="git://github.com/VitalD/fb2info"
-
-KEYWORDS="~amd64 ~x86"
+EGIT_REPO_URI="git://github.com/VitalD/${PN}.git"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE="pcmanfm thunar"
 
 RDEPEND="
