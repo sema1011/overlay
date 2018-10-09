@@ -90,7 +90,7 @@ if [[ $(git diff ../profiles/categories) ]]; then
 	esac
 fi
 
-egencache --ignore-default-opts  --repo=portage-home \
+egencache --ignore-default-opts  --repo=Home \
 	--update-use-local-desc || exit $?
 
 if [[ $(git diff ../profiles/use.local.desc) ]]; then

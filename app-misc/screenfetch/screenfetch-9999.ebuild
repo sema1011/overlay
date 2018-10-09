@@ -1,7 +1,6 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-
 MY_PN="${PN/f/F}"
 DESCRIPTION="A Bash Screenshot Information Tool"
 HOMEPAGE="https://github.com/KittyKatt/screenFetch"

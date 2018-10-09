@@ -11,7 +11,6 @@ SRC_URI="https://github.com/sema1011/Files/raw/master/${P}.tgz"
 
 KEYWORDS="~amd64 ~x86"
 
-
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
