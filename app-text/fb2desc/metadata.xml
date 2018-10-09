@@ -5,6 +5,7 @@
 		<email>sema19689@gmail.com</email>
 		<name>Yakovlev Dmitry</name>
 	</maintainer>
+		<upstream>
 		<remote-id type="sourceforge">fb2desc</remote-id>
 	</upstream>
 </pkgmetadata>
