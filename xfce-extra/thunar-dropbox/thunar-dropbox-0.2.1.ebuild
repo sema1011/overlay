@@ -27,19 +27,20 @@ DOCS=( AUTHORS ChangeLog )
 pkg_setup() {
 	python_setup 'python2*'
 }
+
 src_prepare() {
 	sed -e "s:gtk-update-icon-cache.*:/bin/true':" \
 		-e "s:/lib/:/$(get_libdir)/:" -i wscript || die "sed failed"
 }
+
 pkg_preinst() {
 	gnome2_icon_savelist
 }
+
 pkg_postinst() {
 	gnome2_icon_cache_update /usr/share/icons/hicolor
 	ewarn
 	ewarn "thunar-dropbox does work when dropbox is running."
 	ewarn
 }
-pkg_postrm() { 
-	gnome2_icon_cache_update /usr/share/icons/hicolor; 
-}
+
