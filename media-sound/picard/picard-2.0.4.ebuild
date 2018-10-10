@@ -28,13 +28,12 @@ HOMEPAGE="https://picard.musicbrainz.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+acoustid nls"
+IUSE="nls"
 
 RDEPEND="
 	${PYTHON_DEPS}
 	dev-python/PyQt5[${PYTHON_USEDEP},gui]
 	>=media-libs/mutagen-1.37[${PYTHON_USEDEP}]
-	acoustid? ( >=media-libs/chromaprint-1.0[tools] )
 	dev-python/python-discid[${PYTHON_USEDEP}]
 "
 DEPEND="
