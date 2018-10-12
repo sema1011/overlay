@@ -1,8 +1,7 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI="5"
+EAPI=5
 
 inherit eutils flag-o-matic versionator multilib-minimal
 
@@ -17,7 +16,7 @@ BASE_P="${PN}-${BASE_PV}"
 SRC_URI="mirror://sourceforge/wxpython/wxPython-src-${PV}.tar.bz2"
 
 KEYWORDS="~amd64"
-IUSE="+X aqua doc debug gnome gstreamer odbc opengl pch sdl tiff"
+IUSE="+X aqua doc debug gstreamer odbc opengl pch sdl tiff"
 
 SLOT="2.8"
 
@@ -35,7 +34,6 @@ RDEPEND="
 		x11-libs/libXinerama[${MULTILIB_USEDEP}]
 		x11-libs/libXxf86vm[${MULTILIB_USEDEP}]
 		x11-libs/pango[X,${MULTILIB_USEDEP}]
-		gnome?  ( gnome-base/libgnomeprintui:2.2[${MULTILIB_USEDEP}] )
 		gstreamer? (
 			media-libs/gstreamer:0.10[${MULTILIB_USEDEP}]
 			media-libs/gst-plugins-base:0.10[${MULTILIB_USEDEP}] )
@@ -57,7 +55,7 @@ DEPEND="${RDEPEND}
 			x11-proto/xf86vidmodeproto[${MULTILIB_USEDEP}]
 			)"
 
-PDEPEND=">=app-eselect/eselect-wxwidgets-0.7"
+PDEPEND="app-eselect/eselect-wxwidgets"
 
 LICENSE="wxWinLL-3
 		GPL-2
